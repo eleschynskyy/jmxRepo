@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="LCMS Data" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Prepare Data" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1441881065000</longProp>
+        <longProp name="ThreadGroup.end_time">1441881065000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="LCMS_HOST" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST</stringProp>
+              <stringProp name="Argument.value">https://lcms-isolated.xyleme.com:10180</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="USERNAME" elementType="Argument">
+              <stringProp name="Argument.name">USERNAME</stringProp>
+              <stringProp name="Argument.value">yevhen.leshchynskyy@xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">PASSWORD</stringProp>
+              <stringProp name="Argument.value">Qwerty1234</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="AMOUNT_OF_USERS_TO_CREATE" elementType="Argument">
+              <stringProp name="Argument.name">AMOUNT_OF_USERS_TO_CREATE</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="NEW_USER_PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">NEW_USER_PASSWORD</stringProp>
+              <stringProp name="Argument.value">5PsPeRf0rMaNcEU5eR</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="NEW_USER_EMAIL" elementType="Argument">
+              <stringProp name="Argument.name">NEW_USER_EMAIL</stringProp>
+              <stringProp name="Argument.value">yevhen.leshchynskyy@xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="IMPORT_FOLDER_NAME" elementType="Argument">
+              <stringProp name="Argument.name">IMPORT_FOLDER_NAME</stringProp>
+              <stringProp name="Argument.value">SpsPerfPredefined</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="N_DOCUMENTS_TO_IMPORT" elementType="Argument">
+              <stringProp name="Argument.name">N_DOCUMENTS_TO_IMPORT</stringProp>
+              <stringProp name="Argument.value">98</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="N_FOLDERS_TO_CREATE" elementType="Argument">
+              <stringProp name="Argument.name">N_FOLDERS_TO_CREATE</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPLOAD_SOURCE_DIR" elementType="Argument">
+              <stringProp name="Argument.name">UPLOAD_SOURCE_DIR</stringProp>
+              <stringProp name="Argument.value">D:/Xyleme/performance/products/sps/forImport</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_FOLDER" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_FOLDER</stringProp>
+              <stringProp name="Argument.value">D:/Xyleme/performance/products/sps/output/</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="createUser" enabled="true">
+          <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.RoleInfo;
+import com.xyleme.sdoc.client.UserInfo;
+import com.xyleme.sdoc.client.SDocService;
+String username = vars.get(&quot;USERNAME&quot;);
+String password = vars.get(&quot;PASSWORD&quot;);
+String url = vars.get(&quot;LCMS_HOST&quot;) + &quot;/sdoc-service/xml&quot;;
+int nUsers = Integer.parseInt(vars.get(&quot;AMOUNT_OF_USERS_TO_CREATE&quot;));
+SDocService client = SDocService.login(url, username, password);
+for(int i = 1; i &lt;= nUsers; i++){
+	UserInfo userInfo = new UserInfo(&quot;sps_perf_&quot; + i, &quot;${NEW_USER_EMAIL}&quot;, &quot;SPS_&quot; + i, &quot;PERF_&quot; + i);
+     client.useradd(userInfo, &quot;${NEW_USER_PASSWORD}&quot;);
+     client.adminset(userInfo.username, true);
+//     client.roleadd(new RoleInfo(&quot;All Rights&quot;), userInfo);
+     client.roleadd(new RoleInfo(&quot;Web Publisher&quot;), userInfo);
+     client.roleadd(new RoleInfo(&quot;Publisher&quot;), userInfo);
+     client.roleadd(new RoleInfo(&quot;Project Manager&quot;), userInfo);
+     client.roleadd(new RoleInfo(&quot;Content Author&quot;), userInfo);
+     log.info(i + &quot; users created...&quot;);
+}
+client.logout();</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="importDocuments" enabled="false">
+          <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.SDocService;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Random;
+
+//getting random xml file in folder
+String folderPath = vars.get(&quot;UPLOAD_SOURCE_DIR&quot;);
+File folder = new File(folderPath);
+File[] listOfFiles = folder.listFiles();
+int numberOfFiles = listOfFiles.length;
+Random r = new Random();
+int index = r.nextInt(numberOfFiles);
+String filepath = listOfFiles[index].getAbsolutePath();
+//log.info(&quot;Random file: &quot; + filepath);
+
+//getting content of the xml
+StringBuilder content = new StringBuilder();
+File file = new File(filepath);
+InputStreamReader fstream = null;
+try {
+	fstream = new InputStreamReader(new FileInputStream(file), &quot;UTF-8&quot;);
+	int data;
+	while ((data = fstream.read()) != -1) {
+		content.append((char) data);
+	}
+} catch (FileNotFoundException e) {
+	e.printStackTrace();
+} catch (IOException e) {
+	e.printStackTrace();
+} finally {
+	try {
+		if (fstream != null) fstream.close();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
+
+//import xml to existing folder
+String username = vars.get(&quot;USERNAME&quot;);
+String password = vars.get(&quot;PASSWORD&quot;);
+String url = vars.get(&quot;LCMS_HOST&quot;) + &quot;/sdoc-service/xml&quot;;
+String folderImportTo = vars.get(&quot;IMPORT_FOLDER_NAME&quot;);
+int nDocuments = Integer.parseInt(vars.get(&quot;N_DOCUMENTS_TO_IMPORT&quot;));
+SDocService client = SDocService.login(url, username, password);
+
+//FolderInfo fInfo = client.foldercreate(new FolderInfo(), folderImportTo);
+fInfo = client.folderget(new FolderInfo(), folderImportTo);
+for(int i = 1; i &lt;= nDocuments; i++){
+	String guid = client.importXML(content.toString(), true, fInfo);
+	log.info(&quot;Documents imported: &quot; + i + &quot;; GUID=&quot; + guid);
+}
+client.logout();</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="prepareFolders" enabled="false">
+          <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.SDocService;
+
+String username = vars.get(&quot;USERNAME&quot;);
+String password = vars.get(&quot;PASSWORD&quot;);
+String url = vars.get(&quot;LCMS_HOST&quot;) + &quot;/sdoc-service/xml&quot;;
+int nFolders = Integer.parseInt(vars.get(&quot;N_FOLDERS_TO_CREATE&quot;));
+SDocService client = SDocService.login(url, username, password);
+FolderInfo fInfo;
+for(int i = 1; i &lt;= nFolders; i++){
+	fInfo = client.foldercreate(new FolderInfo(), &quot;FOLDER_&quot; + i);
+	log.info(&quot;Folders created: &quot; + i);
+}
+client.logout();</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="getDocumentsInFolder" enabled="false">
+          <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.SDocService;
+import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.search.PropertyRangeTerm;
+import com.xyleme.sdoc.client.search.SDocQuery;
+import com.xyleme.sdoc.client.SDocInfo;
+import com.xyleme.sdoc.client.SSConstants;
+import com.xyleme.sdoc.client.properties.FragmentProperties;
+import java.io.File;
+import java.io.FileWriter;
+
+String username = vars.get(&quot;USERNAME&quot;);
+String password = vars.get(&quot;PASSWORD&quot;);
+String url = vars.get(&quot;LCMS_HOST&quot;) + &quot;/sdoc-service/xml&quot;;
+String folderImportTo = vars.get(&quot;IMPORT_FOLDER_NAME&quot;);
+SDocService client = SDocService.login(url, username, password);
+FolderInfo fInfo = client.folderget(new FolderInfo(), folderImportTo);
+PropertyRangeTerm pt = new PropertyRangeTerm(FragmentProperties.FRAGMENT_ROOT_OF_DOCUMENT, true, true);
+SDocQuery sQuery = new SDocQuery(pt, null, null);
+SDocInfo sInfo = client.search(fInfo, sQuery, null, SSConstants.GET_PROPS, SSConstants.NO_RESOLVE, false);
+int docsCount = sInfo.getGuids().size();
+// write to file
+File outputFile = new File(vars.get(&quot;OUTPUT_FOLDER&quot;) + &quot;DOCUMENT_GUIDS.txt&quot;);
+if (outputFile.exists()) {
+	outputFile.delete();
+}
+FileWriter writer = new FileWriter(outputFile);
+int i = 0;
+for(String guid: sInfo.getGuids()){
+	i++;
+	writer.write(&quot;vars.put(\&quot;DOCUMENT_GUID_&quot; + i + &quot;\&quot;, \&quot;&quot; + guid + &quot;\&quot;);\n&quot;);
+}
+writer.write(&quot;vars.put(\&quot;N_DOCUMENTS\&quot;, \&quot;&quot; + i + &quot;\&quot;);&quot;);
+writer.close();
+client.logout();</stringProp>
+          <stringProp name="BeanShellSampler.filename"></stringProp>
+          <stringProp name="BeanShellSampler.parameters"></stringProp>
+          <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+        </BeanShellSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

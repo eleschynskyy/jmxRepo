@@ -1,0 +1,1545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="SPS Data" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Prepare Data" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1441881065000</longProp>
+        <longProp name="ThreadGroup.end_time">1441881065000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="LCMS HOSTS_ALL" enabled="false">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="LCMS_HOST_N" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_N</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_HOST_1" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_1</stringProp>
+              <stringProp name="Argument.value">https://studio-perf1.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_HOST_2" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_2</stringProp>
+              <stringProp name="Argument.value">https://studio-perf2.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_HOST_3" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_3</stringProp>
+              <stringProp name="Argument.value">https://studio-perf3.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_HOST_4" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_4</stringProp>
+              <stringProp name="Argument.value">https://studio-perf4.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_HOST_5" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_5</stringProp>
+              <stringProp name="Argument.value">https://studio-perf5.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="LCMS_CLIENTS_ALL" enabled="false">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="LCMS_CLIENT_N" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_N</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_CLIENT_1" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_1</stringProp>
+              <stringProp name="Argument.value">studio-perf1.qa</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_CLIENT_2" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_2</stringProp>
+              <stringProp name="Argument.value">studio-perf2.qa</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_CLIENT_3" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_3</stringProp>
+              <stringProp name="Argument.value">studio-perf3.qa</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_CLIENT_4" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_4</stringProp>
+              <stringProp name="Argument.value">studio-perf4.qa</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_CLIENT_5" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_5</stringProp>
+              <stringProp name="Argument.value">studio-perf5.qa</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="LCMS HOSTS" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="LCMS_HOST_N" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_N</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_HOST_1" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_HOST_1</stringProp>
+              <stringProp name="Argument.value">https://studio-perf2.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="LCMS_CLIENTS" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="LCMS_CLIENT_N" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_N</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_CLIENT_1" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT_1</stringProp>
+              <stringProp name="Argument.value">studio-perf2.qa</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="COURSES" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="COURSE_N" elementType="Argument">
+              <stringProp name="Argument.name">COURSE_N</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="COURSE_1" elementType="Argument">
+              <stringProp name="Argument.name">COURSE_1</stringProp>
+              <stringProp name="Argument.value">1000 (Web Course).zip</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="COURSE_2" elementType="Argument">
+              <stringProp name="Argument.name">COURSE_2</stringProp>
+              <stringProp name="Argument.value">Learning AutoCAD 2015 (Single Source Project).zip</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="OUTPUTS" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="OUTPUT_N" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_N</stringProp>
+              <stringProp name="Argument.value">5</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_1" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_1</stringProp>
+              <stringProp name="Argument.value">(outputType:PerformanceSupport(HTML)%5BClassic%5D)</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_2" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_2</stringProp>
+              <stringProp name="Argument.value">(outputType:PerformanceSupport(HTML)%5BModern%5D)</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_3" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_3</stringProp>
+              <stringProp name="Argument.value">(outputType:OnlineCourse%5BClassic%5D)</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_4" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_4</stringProp>
+              <stringProp name="Argument.value">(outputType:OnlineCourse%5BModern%5D)</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_5" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_5</stringProp>
+              <stringProp name="Argument.value">(outputType:HTMLSlides)</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="USER INFO" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="MASTER_USERNAME" elementType="Argument">
+              <stringProp name="Argument.name">MASTER_USERNAME</stringProp>
+              <stringProp name="Argument.value">perftestadmin</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="MASTER_PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">MASTER_PASSWORD</stringProp>
+              <stringProp name="Argument.value">testmebaby1moretime</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OWN_USERNAME" elementType="Argument">
+              <stringProp name="Argument.name">OWN_USERNAME</stringProp>
+              <stringProp name="Argument.value">yevhen.leshchynskyy@xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OWN_PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">OWN_PASSWORD</stringProp>
+              <stringProp name="Argument.value">Qwerty1234</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OWN__FIRSTNAME" elementType="Argument">
+              <stringProp name="Argument.name">OWN__FIRSTNAME</stringProp>
+              <stringProp name="Argument.value">Eugene</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OWN__LASTNAME" elementType="Argument">
+              <stringProp name="Argument.name">OWN__LASTNAME</stringProp>
+              <stringProp name="Argument.value">Leshchynskyy</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OWN__EMAIL" elementType="Argument">
+              <stringProp name="Argument.name">OWN__EMAIL</stringProp>
+              <stringProp name="Argument.value">yevhen.leshchynskyy@xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_USER_USERNAME" elementType="Argument">
+              <stringProp name="Argument.name">TEST_USER_USERNAME</stringProp>
+              <stringProp name="Argument.value">perf.user_</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_USER_PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">TEST_USER_PASSWORD</stringProp>
+              <stringProp name="Argument.value">5PsPeRf0rMaNcEU5eR</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_USER_FIRSTNAME" elementType="Argument">
+              <stringProp name="Argument.name">TEST_USER_FIRSTNAME</stringProp>
+              <stringProp name="Argument.value">Perf_</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_USER_LASTNAME" elementType="Argument">
+              <stringProp name="Argument.name">TEST_USER_LASTNAME</stringProp>
+              <stringProp name="Argument.value">User_</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="TEST_USER_EMAIL" elementType="Argument">
+              <stringProp name="Argument.name">TEST_USER_EMAIL</stringProp>
+              <stringProp name="Argument.value">yevhen.leshchynskyy@xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="AMOUNT_OF_USERS_TO_CREATE" elementType="Argument">
+              <stringProp name="Argument.name">AMOUNT_OF_USERS_TO_CREATE</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="SPS_FOLDER_NAME" elementType="Argument">
+              <stringProp name="Argument.name">SPS_FOLDER_NAME</stringProp>
+              <stringProp name="Argument.value">SpsPerformanceTestsFolder</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="WPS_FOLDER_NAME" elementType="Argument">
+              <stringProp name="Argument.name">WPS_FOLDER_NAME</stringProp>
+              <stringProp name="Argument.value">WpsPerformanceTestsFolder</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="N_DOCUMENTS_TO_IMPORT" elementType="Argument">
+              <stringProp name="Argument.name">N_DOCUMENTS_TO_IMPORT</stringProp>
+              <stringProp name="Argument.value">200</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_FOLDER" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_FOLDER</stringProp>
+              <stringProp name="Argument.value">D:/Xyleme/performance/products/sps/output/</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="USER_REPORT_FILE" elementType="Argument">
+              <stringProp name="Argument.name">USER_REPORT_FILE</stringProp>
+              <stringProp name="Argument.value">STUDIO_REPORT.txt</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="DOCUMENT_GUIDS_FILE" elementType="Argument">
+              <stringProp name="Argument.name">DOCUMENT_GUIDS_FILE</stringProp>
+              <stringProp name="Argument.value">DOCUMENT_GUIDS_</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPLOAD_SOURCE_DIR" elementType="Argument">
+              <stringProp name="Argument.name">UPLOAD_SOURCE_DIR</stringProp>
+              <stringProp name="Argument.value">D:/Xyleme/performance/products/sps/forImport</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="SPS" elementType="Argument">
+              <stringProp name="Argument.name">SPS</stringProp>
+              <stringProp name="Argument.value">https://sps-perf.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="WPS" elementType="Argument">
+              <stringProp name="Argument.name">WPS</stringProp>
+              <stringProp name="Argument.value">https://xpe-perf.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="N_FOLDERS_TO_CREATE" elementType="Argument">
+              <stringProp name="Argument.name">N_FOLDERS_TO_CREATE</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Initial set" enabled="true"/>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="deleteAllCreatedUsers" enabled="false">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.RoleInfo;
+import com.xyleme.sdoc.client.UserInfo;
+import com.xyleme.sdoc.client.SDocService;
+String username = vars.get(&quot;MASTER_USERNAME&quot;);
+String password = vars.get(&quot;MASTER_PASSWORD&quot;);
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	ArrayList users = client.userlist(true);
+	int totalUserCount = 0;
+	for(UserInfo user: users){
+		if(user.username.startsWith(vars.get(&quot;TEST_USER_USERNAME&quot;)) || user.username.startsWith(vars.get(&quot;OWN_USERNAME&quot;))){
+			totalUserCount++;
+		}
+	}
+	int deletedUserCount = 0;
+	for(UserInfo user: users){
+		if(user.username.startsWith(vars.get(&quot;TEST_USER_USERNAME&quot;)) || user.username.startsWith(vars.get(&quot;OWN_USERNAME&quot;))){
+			client.userdelete(user.username);
+			deletedUserCount++;
+			log.info(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot; deleted: &quot; + deletedUserCount + &quot;/&quot; + totalUserCount);
+		}
+	}
+     client.logout();
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="createOwnUser" enabled="false">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.RoleInfo;
+import com.xyleme.sdoc.client.UserInfo;
+import com.xyleme.sdoc.client.SDocService;
+String username = vars.get(&quot;MASTER_USERNAME&quot;);
+String password = vars.get(&quot;MASTER_PASSWORD&quot;);
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	UserInfo userInfo = new UserInfo(vars.get(&quot;OWN_USERNAME&quot;), vars.get(&quot;OWN_EMAIL&quot;), vars.get(&quot;OWN__FIRSTNAME&quot;), vars.get(&quot;OWN__LASTNAME&quot;));
+     client.useradd(userInfo, vars.get(&quot;OWN_PASSWORD&quot;));
+     client.adminset(userInfo.username, true);
+     client.roleadd(new RoleInfo(&quot;Web Publisher&quot;), userInfo);
+     client.roleadd(new RoleInfo(&quot;Publisher&quot;), userInfo);
+     client.roleadd(new RoleInfo(&quot;Project Manager&quot;), userInfo);
+     client.roleadd(new RoleInfo(&quot;Content Author&quot;), userInfo);
+     client.logout();
+     log.info(&quot;Created user \&quot;&quot; + vars.get(&quot;OWN_USERNAME&quot;) + &quot;\&quot; on &quot; + vars.get(&quot;LCMS_HOST_&quot; + i));
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="createUsers" enabled="false">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.RoleInfo;
+import com.xyleme.sdoc.client.UserInfo;
+import com.xyleme.sdoc.client.SDocService;
+String username = vars.get(&quot;OWN_USERNAME&quot;);
+String password = vars.get(&quot;OWN_PASSWORD&quot;);
+int nUsers = Integer.parseInt(vars.get(&quot;AMOUNT_OF_USERS_TO_CREATE&quot;));
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	for(int j = 1; j &lt;= nUsers; j++){
+		UserInfo userInfo = new UserInfo(vars.get(&quot;TEST_USER_USERNAME&quot;) + j, vars.get(&quot;TEST_USER_EMAIL&quot;), vars.get(&quot;TEST_USER_FIRSTNAME&quot;) + j, vars.get(&quot;TEST_USER_LASTNAME&quot;) + j);
+		client.useradd(userInfo, vars.get(&quot;TEST_USER_PASSWORD&quot;));
+		client.adminset(userInfo.username, true);
+		client.roleadd(new RoleInfo(&quot;Web Publisher&quot;), userInfo);
+		client.roleadd(new RoleInfo(&quot;Publisher&quot;), userInfo);
+		client.roleadd(new RoleInfo(&quot;Project Manager&quot;), userInfo);
+		client.roleadd(new RoleInfo(&quot;Content Author&quot;), userInfo);
+		log.info(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;: &quot; + j + &quot; users created out of &quot; + nUsers);
+	}
+	client.logout();
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="createFolders" enabled="false">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.SDocService;
+String username = vars.get(&quot;OWN_USERNAME&quot;);
+String password = vars.get(&quot;OWN_PASSWORD&quot;);
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+String spsFolder = vars.get(&quot;SPS_FOLDER_NAME&quot;);
+String wpsFolder = vars.get(&quot;WPS_FOLDER_NAME&quot;);
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	FolderInfo fInfo = client.foldercreate(new FolderInfo(), spsFolder);
+	FolderInfo fInfo = client.foldercreate(new FolderInfo(), wpsFolder);
+	client.logout();
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="importDocuments" enabled="true">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.SDocService;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Random;
+
+//getting random xml file in folder
+String folderPath = vars.get(&quot;UPLOAD_SOURCE_DIR&quot;);
+File folder = new File(folderPath);
+File[] listOfFiles = folder.listFiles();
+int numberOfFiles = listOfFiles.length;
+Random r = new Random();
+int index = r.nextInt(numberOfFiles);
+String filepath = listOfFiles[index].getAbsolutePath();
+//log.info(&quot;Random file: &quot; + filepath);
+
+//getting content of the xml
+StringBuilder content = new StringBuilder();
+File file = new File(filepath);
+InputStreamReader fstream = null;
+try {
+	fstream = new InputStreamReader(new FileInputStream(file), &quot;UTF-8&quot;);
+	int data;
+	while ((data = fstream.read()) != -1) {
+		content.append((char) data);
+	}
+} catch (FileNotFoundException e) {
+	e.printStackTrace();
+} catch (IOException e) {
+	e.printStackTrace();
+} finally {
+	try {
+		if (fstream != null) fstream.close();
+	} catch (IOException e) {
+		e.printStackTrace();
+	}
+}
+
+//import xml to existing folder
+String username = vars.get(&quot;OWN_USERNAME&quot;);
+String password = vars.get(&quot;OWN_PASSWORD&quot;);
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+int nDocuments = Integer.parseInt(vars.get(&quot;N_DOCUMENTS_TO_IMPORT&quot;));
+String spsFolder = vars.get(&quot;SPS_FOLDER_NAME&quot;);
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	fInfo = client.folderget(new FolderInfo(), spsFolder);
+	for(int j = 1; j &lt;= nDocuments; j++){
+		String guid = client.importXML(content.toString(), true, fInfo);
+		log.info(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;: imported &quot; + j + &quot;/&quot; + nDocuments + &quot;; GUID=&quot; + guid);
+	}
+	client.logout();
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="getStatus" enabled="true">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.RoleInfo;
+import com.xyleme.sdoc.client.UserInfo;
+import com.xyleme.sdoc.client.SDocService;
+import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.search.PropertyRangeTerm;
+import com.xyleme.sdoc.client.search.SDocQuery;
+import com.xyleme.sdoc.client.SDocInfo;
+import com.xyleme.sdoc.client.SSConstants;
+import com.xyleme.sdoc.client.properties.FragmentProperties;
+import java.io.File;
+import java.io.FileWriter;
+String username = vars.get(&quot;OWN_USERNAME&quot;);
+String password = vars.get(&quot;OWN_PASSWORD&quot;);
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+int nUsers = Integer.parseInt(vars.get(&quot;AMOUNT_OF_USERS_TO_CREATE&quot;)) + 1;
+File outputFile = new File(vars.get(&quot;OUTPUT_FOLDER&quot;) + vars.get(&quot;USER_REPORT_FILE&quot;));
+if (outputFile.exists()) {
+	outputFile.delete();
+}
+FileWriter writer = new FileWriter(outputFile);
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String status;
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	writer.write(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;\n\t&quot;);
+	ArrayList users = client.userlist(true);
+	int enabledUsersCount = 0;
+	for(UserInfo user: users){
+		if((user.username.startsWith(vars.get(&quot;TEST_USER_USERNAME&quot;)) || user.username.startsWith(vars.get(&quot;OWN_USERNAME&quot;))) &amp;&amp; !user.locked &amp;&amp; user.enabled){
+			enabledUsersCount++;
+		}
+		if((user.username.startsWith(vars.get(&quot;TEST_USER_USERNAME&quot;)) || user.username.startsWith(vars.get(&quot;OWN_USERNAME&quot;))) &amp;&amp; (user.locked || !user.enabled)){
+			writer.write(user.username + &quot;\n\t&quot;);
+			log.info(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;: invalid: &quot; + user.username);
+		}
+	}
+	writer.write(&quot;valid: &quot; + enabledUsersCount + &quot;/&quot; + nUsers + &quot;\n\tinvalid: &quot; + (nUsers - enabledUsersCount) + &quot;/&quot; + nUsers + &quot;\n\t&quot;);
+	if((nUsers - enabledUsersCount) &gt; 0){
+		status = &quot;WARNING&quot;;
+	} else {
+		status = &quot;OK&quot;;
+	}
+	writer.write(&quot;USER STATUS: &quot; + status + &quot;\n\t&quot;);
+	log.info(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;: valid: &quot; + enabledUsersCount + &quot;/&quot; + nUsers + &quot;; invalid: &quot; + (nUsers - enabledUsersCount) + &quot;/&quot; + nUsers);
+	//report documents info
+	String spsFolder = vars.get(&quot;SPS_FOLDER_NAME&quot;);
+	FolderInfo fInfo = client.folderget(new FolderInfo(), spsFolder);
+	PropertyRangeTerm pt = new PropertyRangeTerm(FragmentProperties.FRAGMENT_ROOT_OF_DOCUMENT, true, true);
+	SDocQuery sQuery = new SDocQuery(pt, null, null);
+	SDocInfo sInfo = client.search(fInfo, sQuery, null, SSConstants.GET_PROPS, SSConstants.NO_RESOLVE, false);
+	writer.write(&quot;#DOCUMENTS: &quot; + sInfo.getGuids().size() + &quot;\n----------------------------------\n&quot;);
+	log.info(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;: #DOCUMENTS: &quot; + sInfo.getGuids().size());
+	client.logout();
+}
+writer.close();</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Aux" enabled="false"/>
+        <hashTree>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="getDocumentsInFolder" enabled="false">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.SDocService;
+import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.search.PropertyRangeTerm;
+import com.xyleme.sdoc.client.search.SDocQuery;
+import com.xyleme.sdoc.client.SDocInfo;
+import com.xyleme.sdoc.client.SSConstants;
+import com.xyleme.sdoc.client.properties.FragmentProperties;
+import java.io.File;
+import java.io.FileWriter;
+
+String username = vars.get(&quot;OWN_USERNAME&quot;);
+String password = vars.get(&quot;OWN_PASSWORD&quot;);
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+String spsFolder = vars.get(&quot;SPS_FOLDER_NAME&quot;);
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	FolderInfo fInfo = client.folderget(new FolderInfo(), spsFolder);
+	PropertyRangeTerm pt = new PropertyRangeTerm(FragmentProperties.FRAGMENT_ROOT_OF_DOCUMENT, true, true);
+	SDocQuery sQuery = new SDocQuery(pt, null, null);
+	SDocInfo sInfo = client.search(fInfo, sQuery, null, SSConstants.GET_PROPS, SSConstants.NO_RESOLVE, false);
+	// write to file
+	File outputFile = new File(vars.get(&quot;OUTPUT_FOLDER&quot;) + vars.get(&quot;DOCUMENT_GUIDS_FILE&quot;) + i + &quot;.txt&quot;);
+	if (outputFile.exists()) {
+		outputFile.delete();
+	}
+	FileWriter writer = new FileWriter(outputFile);
+	int j = 0;
+	for(String guid: sInfo.getGuids()){
+		j++;
+		writer.write(&quot;vars.put(\&quot;DOCUMENT_GUID_&quot; + j + &quot;\&quot;, \&quot;&quot; + guid + &quot;\&quot;);\n&quot;);
+	}
+	writer.write(&quot;vars.put(\&quot;N_DOCUMENTS\&quot;, \&quot;&quot; + j + &quot;\&quot;);&quot;);
+writer.close();
+client.logout();
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="deleteDocumentsInFolder" enabled="true">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.RoleInfo;
+import com.xyleme.sdoc.client.UserInfo;
+import com.xyleme.sdoc.client.SDocService;
+import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.search.PropertyRangeTerm;
+import com.xyleme.sdoc.client.search.SDocQuery;
+import com.xyleme.sdoc.client.SDocInfo;
+import com.xyleme.sdoc.client.SSConstants;
+import com.xyleme.sdoc.client.properties.FragmentProperties;
+
+String username = vars.get(&quot;OWN_USERNAME&quot;);
+String password = vars.get(&quot;OWN_PASSWORD&quot;);
+int lcmsHostCount = Integer.parseInt(vars.get(&quot;LCMS_HOST_N&quot;));
+String spsFolder = vars.get(&quot;SPS_FOLDER_NAME&quot;);
+for(int i = 1; i &lt;= lcmsHostCount; i++){
+	String url = vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;/sdoc-service/xml&quot;;
+	SDocService client = SDocService.login(url, username, password);
+	FolderInfo fInfo = client.folderget(new FolderInfo(), spsFolder);
+	PropertyRangeTerm pt = new PropertyRangeTerm(FragmentProperties.FRAGMENT_ROOT_OF_DOCUMENT, true, true);
+	SDocQuery sQuery = new SDocQuery(pt, null, null);
+	SDocInfo sInfo = client.search(fInfo, sQuery, null, SSConstants.GET_PROPS, SSConstants.NO_RESOLVE, false);
+	int documentsCount = sInfo.getGuids().size();
+	int j = 0;
+	for(String guid: sInfo.getGuids()){
+		client.forcecheckin(guid, true);
+		client.delete(guid, true);
+		j++;
+		log.info(vars.get(&quot;LCMS_HOST_&quot; + i) + &quot;: deleted &quot; + j +&quot;/&quot; + documentsCount + &quot;; &quot; + guid);
+	}
+	client.logout();
+}</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+          <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="prepareFolders" enabled="false">
+            <stringProp name="BeanShellSampler.query">import com.xyleme.sdoc.client.FolderInfo;
+import com.xyleme.sdoc.client.SDocService;
+
+String username = vars.get(&quot;USERNAME&quot;);
+String password = vars.get(&quot;PASSWORD&quot;);
+String url = vars.get(&quot;LCMS_HOST&quot;) + &quot;/sdoc-service/xml&quot;;
+int nFolders = Integer.parseInt(vars.get(&quot;N_FOLDERS_TO_CREATE&quot;));
+SDocService client = SDocService.login(url, username, password);
+FolderInfo fInfo;
+for(int i = 1; i &lt;= nFolders; i++){
+	fInfo = client.foldercreate(new FolderInfo(), &quot;FOLDER_&quot; + i);
+	log.info(&quot;Folders created: &quot; + i);
+}
+client.logout();</stringProp>
+            <stringProp name="BeanShellSampler.filename"></stringProp>
+            <stringProp name="BeanShellSampler.parameters"></stringProp>
+            <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+          </BeanShellSampler>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Import WPS" enabled="false"/>
+        <hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${LCMS_CLIENT_N}</stringProp>
+          </LoopController>
+          <hashTree>
+            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+              <collectionProp name="HeaderManager.headers">
+                <elementProp name="" elementType="Header">
+                  <stringProp name="Header.name">Content-Type</stringProp>
+                  <stringProp name="Header.value">application/x-www-form-urlencoded</stringProp>
+                </elementProp>
+              </collectionProp>
+            </HeaderManager>
+            <hashTree/>
+            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+              <collectionProp name="CookieManager.cookies"/>
+              <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+              <stringProp name="CookieManager.policy">default</stringProp>
+              <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+            </CookieManager>
+            <hashTree/>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="iteration" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end"></stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">iteration</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="set LCMS" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey"></stringProp>
+              <stringProp name="script">vars.put(&quot;LCMS_CLIENT&quot;, vars.get(&quot;LCMS_CLIENT_&quot; + vars.get(&quot;iteration&quot;)));
+vars.put(&quot;LCMS&quot;, vars.get(&quot;LCMS_HOST_&quot; + vars.get(&quot;iteration&quot;)));</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="LOGIN" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN_j_spring_security_check" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">j_username=${OWN_USERNAME}&amp;j_password=${OWN_PASSWORD}&amp;loginForm%3A_idJsp30.x=28&amp;loginForm%3A_idJsp30.y=7&amp;loginForm_SUBMIT=1&amp;loginForm%3A_idcl=&amp;loginForm%3A_link_hidden_=&amp;javax.faces.ViewState=8EgC7hvJoXWgMHaUZxk5rx66APlnNueyP32ajDxbvc%2Fi5akMf2jX5W9NF3roe9lcuwszUVsDa0paIZKDZQ%2FqA9OQRll%2FxMrtmLgZKpZNcAtQpr8GrghrNLKYKcMTveuOoPxjW0RBSGWLlbNKis4mRBrO4tujcnsSlCHO1%2FEcj9sLLaWs7LYqdJslRL9wHnfUPRsur%2F2RBQcVQUT6EI64y6BwzaXQK37vpgyPtA7WPQ9Zg60FtkeWwSPtEDqRX46pa%2FpdgaxKwT5Qpr8GrghrNJXzObHKV6N3y91lSAwHr2ypchHMOzsb37act%2Bt62rcJ6OF0Xl%2Bb2Roe1OHE%2BCd08IFhSRy0QFDihtkzwJTcNMF%2FuXdEjTHklsOSgV40cTZS0e17vwBJhFIgmnPhSnPHsQibPAnCvlbYOCGLTRzJwX%2F1j1r3IbaA1BDTyeB9EgLJhlIxyXpUaCSEfG4vrCIXNRrtrs2gSGsvkxOAjcwktcYjarrUWF9mT1BShWb%2BVgU6izAH8VR0q9hCcegcPPGltwmVhYCHQdjvMFydGhVy05ib%2BZRudPSUnDBcnRoVctOYm%2FmUbnT0lJw0jV1iNI4OcBe12dccOlNocuQ5ikOt7NWDrWI5UEQW3O%2Bw5Zw6oApZmdDXdVIpTTeGXbv7A%2BFDQ%2BxcwaW6ThVJnEfdiJK8bCVS2p2zJaoDSu8jweRVcZcjdZ75Szicf1DSqQ8kRr0gJtbcE4mxKSE%2F0p%2FmGsBlgqNWtgFhmSQFvZY9v4%2BPx0DeiFJGcKKWiLADBOJ%2F4yzr%2BlzrkpNJ7%2F362XfXgizrwJOIBk4zT5kxF8nyVKM35R4e0s8YVTCH4ge7CzNRWwNrSlohkoNlD%2BoD0iZqbdrifKyZJqjDdn6tCxq%2FeP%2FWfcG9KsTNirgXPd1%2FfRyoEDq1qEnExdcJE9ro8v35y5TDsrPNd2YGcYo7yvL9%2BcuUw7KzzXdmBnGKO8ry%2FfnLlMOys2x3klu%2FfW%2Fk8v35y5TDsrPNd2YGcYo7yvL9%2BcuUw7KzzXdmBnGKO8ry%2FfnLlMOys813ZgZxijvKASHLZfHcbt0SYuR0WZ4aRsl2IncyYDXz9lpj7EH4r8QAEZJUagPRcDtXeRZKkgNaQdnCleRDit2HYFpk%2F9FH%2Bx0jRt8oLc0Npjc3aD7dzcV6iLbVa3ctLrvdwBLXTqZZJMMeKE5w6dB%2FfRyoEDq1qABGpUBHd67a4Iv0DA1oe8seYqahfuKn6BGV4UKF%2Ft9YUo2V1GHb4oPk4sSQyd2SMwPYcKI5QIoyNdXax8ec8RArYJgXy3BlMtC1Jl%2BdZ8ff5HK1fim%2BzjvQtSZfnWfH3xiLlOi%2FAoqb0LUmX51nx9%2FkcrV%2BKb7OO9C1Jl%2BdZ8ff5HK1fim%2BzjvxPHmGvR3rLLg8GFGyj64zy%2BVlqPpc5P814%2FzAy7D2JmgZej%2BpVgOXqXIRzDs7G9%2BMX7OeWlYh87q4JQlGTWUtg1wCn2GFyEBzvJ1xr%2BBSYbqKt%2BXPjpDhaGelPZr1cMPaPqWyzjarsvwgai3HgCjSWhQcveWesuv8IGotx4Ao0qL%2FVhvtOvJs%2FCBqLceAKNKi%2F1Yb7TrybPwgai3HgCjSU3RvtHt8Gjpcfsu66p3fTwME4n%2FjLOv6k7JRqKK8QqmGFrz2xw3LtC1pHmTiN%2FK5gtlm4OEPGp15qvFZSTvpDPFTSxX65QPv6w6ERbQac%2FBHhfHIRSRZVH2oVC3zutsvQdnCleRDit0RS61hbPK3OR0jRt8oLc0Npjc3aD7dzcVXz9TVntv3nch5RKYIuP1JOpRxKA%2FrTMc%2BR5DNn3LTGxT5182ZhiRcL%2FQxN1n8ZQe82ED3vTPFwEHZwpXkQ4rdKXLAoniEiVIU%2BdfNmYYkXPT6rh12NjsTfNnPF9aMD7bELi6VHgjyh9lFHGr1%2BQc8yXYidzJgNfPw4WYy0oX7EFpQlypQSMByIO44UR%2B%2FRK2LuhDBK4CuUBHontOiw8SkD8YZni6sPuNmdCCvi7LZjaOFQo7AMHn8WaPZOYWpt%2Fxh4bvQEto3ajSNXWI0jg5wKCRwz5c9K8vFAA0izcJWQ9GwH%2FlgGgUi8noAGlHl2N%2BWLFS6bmx20M99H3S7qL1L2PTzen9YUDYyHg2BP36GZN5I371Rj%2BbdjKPbD78Z43i5lSZORuB%2Bc0dXuTCWKJuoS3oSvwbkQrhOT7RBzTyb9Ut6Er8G5EK4Tk%2B0Qc08m%2FWMo9sPvxnjeLmVJk5G4H5zAONw9dty35%2BmFrYFHjEW4KQwM8p5aa1RKxpUD5DlCQaR3k0QRrxV3Hy7TM%2BR%2BjEb2qNQfeVLhReKPYKPFjXGX5lPSe4so7p%2BAM%2FAEtopQXG4CFfQX2E2UMYQgkJWprJ80bAf%2BWAaBSLyegAaUeXY3wMzhk8w26rr2NLg3ybWKAWFtUQydZSGkTySCdk0zSeFgd48cPt1ZwrzMlchMJ8gaoM0GnEawCnAZ31fXP3kjd5Be8%2B4wb0%2FwDGSNyFbMl%2FlmCWJEKem7YxpQ80%2BEtPc8OpuIWl%2FmTJlLG2%2F9%2BsWDl8giAc3kI7TqNDR6Ww1W7gnxXy5d4mzmeLhBxm8hmxUv47z%2BenzvlyAuoq35c%2BOkOGy9cikK8JNKesOhEW0GnPwR4XxyEUkWVThBUsUXXHmVvL9%2BcuUw7KzkfBEBDsgpKYxkjchWzJf5ZgliRCnpu2MaUPNPhLT3PCux1zIODcKYMZ2FiGesx0CEURGc9umrmIMunSD0w2dbZY9v4%2BPx0DegvFyFWn27Y0nwQyIWQKVGJY9v4%2BPx0DegvFyFWn27Y0NohwGCJ4%2FqNo%2BpbLONquy%2FCBqLceAKNKi%2F1Yb7TrybPwgai3HgCjSLD2TeYyUeF0gjqljzqXkH3%2FXjAig5MHAlj2%2Fj4%2FHQN4gjqljzqXkH2cI8uG0qSJy2j6lss42q7L8IGotx4Ao0iw9k3mMlHhdII6pY86l5B8ObR5AEPwE4ZY9v4%2BPx0DeII6pY86l5B8fhJE0MQzAeZY9v4%2BPx0DeII6pY86l5B9qHNUB8C15B147i7dD915VWfJkiZXTih4A2u4%2B7GmvE0HZwpXkQ4rdzcArJcp%2BR125lSZORuB%2Bc3%2BajBgCYvcpS3oSvwbkQrhOT7RBzTyb9Yyj2w%2B%2FGeN4uZUmTkbgfnOk97e4csIz8W46F173k8Ujrr13JOOvD1IrGlQPkOUJBqXXAm5L2H9PvSV%2BYSIoGpYfsnc9tWx6xa00oCjErrgxxQANIs3CVkNmwaiBxyQz0zFs7N1mHXgn0nIDb3aNM76yqQYVzyjCi5xFp%2BMOzhJfuwszUVsDa0paIZKDZQ%2FqA9Imam3a4nysmSaow3Z%2BrQsav3j%2F1n3BvYB3viaReyiyf30cqBA6tah3OpqSUUJMJc%2F%2FYKScE2apT4lh8nO0EntJza%2FeDnkAv8QuLpUeCPKH2UUcavX5BzxJy0t4c8GINlGNTNkbi%2BWZeoTr%2FROwY1FY%2Fd40CjPTwgHS%2FXBuGK4rHSNG3ygtzQ2mNzdoPt3NxQJ0myJwPAcDIzWowGj55iYbFZIpjWcB9UTjeQ%2Ba5fDG5xSQj%2FN8pTetUx2nQJLr2BzwhKimhAB%2BVyl%2FP%2Bugwo35WvqHGN2kEV9ikBwnxkNcS3c7vNWTcR%2BZC%2Bz1RZ4Wq3JU2XiwRSJnZFtuDjTNmffXj6a8xWIVoVyspIbqMvs9Nxn%2Ft%2FEJnVVXKX8%2F66DCjYN8wjMWRARLb8l9soFUi%2FVDeCL4IqRXnzhUBXG%2BTXL%2Fpigswza0kkeaci%2BOW9enNTJbvR4kYbZLJkbHSXL1wMq%2FIpo0RnYAMphBy4V9SmIsmNC%2BapC4ZevkK1pIFr0oSp740Dd9GJU5JC0MSW7hhOSLoILu5RlNdIuWOFaxVsvvdnCqBT8l0WIxrkO%2FXIZrge%2FceFdo6L6JsShv5Zk1l9V14j3%2FoV%2FdBl2xfTguk1atFAtxUJd6uZMFw%2BkW81qzUfFyBNHNRd0j9ytEIROxqDfHtb5UfgsqgFZ0U8AdBYr8R7axnEDPftvt3u97DfPORxbHDh445nU0qDbjbmVZYBwWClXWvtqT863%2BFHykE5mpZozbuaKZyfvXM41QqrE%2F1%2F2phFswqNLz14wKVCTSW60%2FqGEtEBw2PxfVBXNErTM8OJC26NcVeZscAueiOFm%2F6yGVAM%2BZW6e2UCdxk4MrNi9noC3D62lIzriPH2YcgBfhmJ%2FKM3QXbxB8ojIZxmH0%2B5O56xI0qLElCidchm9BOeXt%2BDOmkqnD69xHE3xey5KQpFJr9IWC6pYKQsuFeNaOqMZLNYEzZ0sG6OTVzfhn5UZVDcdWBiOvPnZ7RWt9BSFckr6HTAXRTaST2L1BIA%2BSYBai8pyTPzBJmxqCV67FGnO4K2vB%2FG0J%2FRUL4B8mFmardlz79Wiipd88gomsGfXf7jMAVx8dNWkRRON5D5rl8MYvI6rXe4T23LBTbVYEG6aoN4SO4yPZ4kGtiBwGAhSHPYBlALiv7cwjxQANIs3CVkMImM8ayfzWAkjIIsym7R7YrXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quAtGl%2FLBIOmebiNQuT7CrLuC%2F1ghQv2wF42wuMuUpR2M%2Fv06jzAOWM7F2xzIvX%2BOJA0SPtWrLovJpRjjpwk7H5FFBU8j87uXdos21Z6cJaJhivtZiQGUe3Z7%2BdCcMXJHKxrJnsZq7GkM1mjNu5opnJ%2B7lQvNoaF0jdf1TxbuT18BNR8lyQUBJ%2BcqwFbRHwT2DYmN5nAaeLXK8CLNjahhEHxywJ%2FFzCQDWVUDZMOgsw4HVq%2Bs%2FC5g6Za%2B3ZSwFZO0C6WBQVTE%2B4gXs0ajsnYnUclpvtDO1asAKZaBl6P6lWA5epchHMOzsb348CRsPIc6cSGruMD2jxPD74MHk57VnynKn0RFgIDCd%2F9NRUTubAeJrPiUsZ3FXtn1OZAm%2B83ReMxelcz%2B4GTZFmbkG%2BHIq1Wdw%2FtZkoI5nYbL8hWQpAOxJ4NR%2BZekm0A4UreKfojt25LqwgSPMSiH1S2p2zJaoDSu8jweRVcZcjOAjG07spu0%2B0dW4IbjbdhrD1x8paSzJ9HNoRukn4gwEpeMCWMAqbv9%2B3oKPc03vsICVncG%2B%2B86ZRXK9LZSyA%2BVDmSHT0bPiDSa8gIBfl7EkWClXWvtqT8xicsyuBzaOTZozbuaKZyfuzbVnpwlomGDeSSyMQlNeRWZL7ldjsfQ6YJYkQp6btjEZTPDuS17bw2aDBlMHumNrjEKdkLLvi%2B0ivTOre4MMm9ATqsAwubzujwL98nA7DS2%2FqSntO%2BS%2B%2BfO%2FaPvtFRnAtjeu9YSFL7wZrXtF5HD3mDMRnGdEIRmfXJ1lb80BCn77o5iaobLAFGxWSKY1nAfVE43kPmuXwxs%2F914YdEjmjwQ9XZl3o6o43hI7jI9niQdPSu0khZjCTBnvESVuokNjFAA0izcJWQ%2FYSwPbBS9FcGNXkmqdetiKY3mcBp4tcrwIs2NqGEQfHLAn8XMJANZUrkCwSf4PiFPVScaG4fvZpYAJciSKdyUkTCgMCWfWRD2pCEjbtRF1o7UH4MSfx4dFA7%2Bc9cnDAqZrvz8tCseX4qRvwWzhYo9KsmexmrsaQzWaM27mimcn7LiKDm977qT67w7oAmMNfrdFeuKAFdktkvyXjiPxWtTD1j1r3IbaA1BDTyeB9EgLJi5xY4f7ltRZJq%2B%2BTLR0PODiQtujXFXmbHALnojhZv%2BuoEJ4C0jGPTCLdqo%2FujnR1OhItjFLXpHsAV6cJTITVLVfYdBC3qF1EINxtA5egd9%2BQTuzsQzskJSKr6oSGr%2FVMwhbILEtsheAbFZIpjWcB9UTjeQ%2Ba5fDGu25I4DEs9u9qlU9pLUTHfDeEjuMj2eJBzn9LOK4jHFvdECoFJNlZucUADSLNwlZDqZ2E1IIEcZJHBC0klt3epqanfFcHbe9Ib1ROLEB89EXCqkGoI60oSOSp6bNosnRKRNye6YlM0MXNe%2BuLfvyi9WW%2BIM%2BU0TN5P5TyS%2BYjU0%2BQTuzsQzskJZBO7OxDOyQlkE7s7EM7JCVcCjo5QT6EGi5rF9FTLsigL956GfJNMMcHrlqVGjjjxgCbhXkESZl2%2F30qT57IPKCoNuNuZVlgHBYKVda%2B2pPzqIw1ziWCF21mjNu5opnJ%2BzEI2FTzwsPJf1TxbuT18BO94ym7o9Km7by2tRGGkaBymN5nAaeLXK8CLNjahhEHx2hPBcbZicfB2ePph086LxoLSvF2xNf1bIhi%2FwNtqF7UJjxeg5j2aIqXbEGXOCaILoFkrSlM8YZcwhMs5KG4%2FOQVNPb%2FpkWnrauEC5rR7SSgCL1q7Er8nmWg2Rb%2FWsixWkI%2F10yPFpIIY%2F4yPRjAzM%2BP594Enc%2BsvS%2B6VTs56JE0UNOtqh%2B%2BQxLD2PFm6tZ%2BHpBO7OxDOyQlkE7s7EM7JCVRjjpwk7H5FFBU8j87uXdos21Z6cJaJhivtZiQGUe3ZxYKVda%2B2pPztCuReJFg1uwfcBaXCyoIscYQgkJWprJ86mXd8dSuUjV%2BTKvoqIOvF0ivTOre4MMm9ATqsAwubzuImE63UTUrlKonTqKQtulvgdjC7uLLaYWbGoJXrsUac4TGkKlLIhP%2BTKEkmwDEShtRjjpwk7H5FHds1hMiLJQs%2Bcsw1HeKwfOvtZiQGUe3Z6A7pSF4InuotCuReJFg1uxqR2gNCMqXbYqdj%2Bomw4txmN5nAaeLXK8CLNjahhEHx2hPBcbZicfB1W%2Bd0rDYict9dYb0TRDJtETcnumJTNDFzXvri378ovXyXgxeS7VVaG9PDHeZIADoGVON4qnsdOd3K157rndgP45m4ITy8EOTowgm2jqJM3%2FKISxSHMRQTZBO7OxDOyQl9ARBX478ILaoj3TVbmy7BvgfC3dmlYLAPIKJrBn13%2B4eoqYbDxO7oR8gM%2FkihzoFLyOq13uE9tzBD1dmXejqjjeEjuMj2eJBX%2BNTPW1qchI2tPFbVh3wsfgJXUkiOxxVQ5ztSHd%2FRhG%2BT1rk6yKEWg6luwUNf6N0Jjxeg5j2aIqXbEGXOCaILiOWj3AoTg%2FOlyg0EZs5RH4tSndrUUQa2v99Kk%2BeyDygqDbjbmVZYBwWClXWvtqT80zWhTkRFwKqZozbuaKZyftne8Pcmyf%2BD5Sq5Bv7ErReHqufeGbxLZwSYuR0WZ4aRlxT54LLtlAEOJC26NcVeZscAueiOFm%2F6zYhGbFyvxKOIt2qj%2B6OdHX9XlpUATR%2FLFtizLcN%2Bx2%2B5Crtkag%2FPoa11ZvMqwYwDZBO7OxDOyQlkE7s7EM7JCXxLaIW1Qb4Jv8udDE9HH7%2FrJnsZq7GkM1mjNu5opnJ%2B7NtWenCWiYYqwjHZjIHaTz6DPpaYzHDnGr6z8LmDplr14%2BmvMViFaH6MczlRPO2cqD6FCcnUfPgicDulVEdg7efc5Hq2caYaWkNn05J3RXUjVOh%2BgZW8ZcHcY1WRZ16YRGUnPoHR9PyW%2F7%2FpSj9AonBqENZklLOOhsVkimNZwH1j8LxvGaTVgy6wg8DoCOoFAr9YnsIl%2F%2Fqvw4Fc1%2FyucpIdbkW7SkgviYgcwP%2BpKDUJM8%2BCxFTxgyt3ut%2FYcSjxZ0UvqfAQBPugdjC7uLLaYWbGoJXrsUacyiWTHG1YG2ppUJn%2BeBKdTfUgYjpkgwVTrET4u2NF%2BMjw9jxZurWfh6QTuzsQzskJQuw9XC8XF2yYpsgYHt3J3S3lSWT4FpHnvX39cEo2hGIb3bzIH97MXKsmexmrsaQzWaM27mimcn7LAhBqYynQEsdSVouZyKnQ0D9LtprVz6ScmlCKWNPT4Km3OBoBr3oEnp10n9QQlAkmN5nAaeLXK8CLNjahhEHx2hPBcbZicfB1W%2Bd0rDYicvah94jMypoJyyMlbwcD6Xa7q%2FRQU5zTP138UQUG1TRK7%2BL%2FkV7D1KZizza%2B7WkHDkuFzCPNBvWFBVdvyg0EBhMIvwfMxed%2FhCQTuzsQzskJZBO7OxDOyQlIqvqhIav9UzCFsgsS2yF4BsVkimNZwH1RON5D5rl8MY38RI%2BHRWc5MEPV2Zd6OqON4SO4yPZ4kGHF58y5rWKCQLH8bFr%2F2apIY%2F3LKolzM7k1b7ocLUIRWDeseM8QV3El1TRMOO%2F%2BA44kLbo1xV5mxwC56I4Wb%2FrqBCeAtIxj0wi3aqP7o50dToSLYxS16R7AFenCUyE1S1X2HQQt6hdRG01hbR10%2BbxUWTnnaTlM4qxlgFNgm%2BQppBO7OxDOyQlkE7s7EM7JCWQTuzsQzskJTyCiawZ9d%2FuHqKmGw8Tu6FByeACXRAPnS8jqtd7hPbcESAEJCTn5wDBqENZklLOOhsVkimNZwH10g38gjNVWegwkOLlXN7wQjiQtujXFXmbHALnojhZv%2Bs2IRmxcr8SjiLdqo%2FujnR1lKF%2Bv4bBXx9lviDPlNEzedpTebtX9R%2F%2Bqx7%2BaecjeiBLJ8Vb%2FR9GDB9eCeax%2FA0YzIeS5JfOnrgDSG1RVQhe9rHRQvqK5Z68bts1T8R1D0WcBBPSOnjcmeyrUwkn10Q0bzyi%2FTnwsoUWClXWvtqT86yZ7GauxpDNZozbuaKZyftpvunX11cs7ro98BUWHmEopqd8Vwdt70hvVE4sQHz0RcKqQagjrShI5Knps2iydEpE3J7piUzQxc1764t%2B%2FKL14DksiqLKGN5HrjYNlnWaefc6gu%2FQzel5B3GNVkWdemH5LAMSYy4P7ZbvifJbHawKwahDWZJSzjobFZIpjWcB9XluP0cirzmGfkyr6KiDrxdIr0zq3uDDJvQE6rAMLm87KFkMmMJyCAbur9FBTnNM%2FXfxRBQbVNErFwR3U9FBhOp%2F%2BZoknXyjEzbE2VK6QkInu6QuHQMLiausmexmrsaQzWaM27mimcn7LAhBqYynQEtdRosyAE3Pop1gc%2FEa%2BpxuavrPwuYOmWvXj6a8xWIVoVyQIasny9rnoPoUJydR8%2BB9OcAA1eXzi2iadbAgUwliL%2FWCFC%2FbAXjbC4y5SlHYz9G18VwQuXOTWmefPp6Lz6X1ahw7AguoaPskB9Ez08oxkE7s7EM7JCWQTuzsQzskJS1Kd2tRRBra%2F30qT57IPKCoNuNuZVlgHBYKVda%2B2pPzrJnsZq7GkM1mjNu5opnJ%2B0SDax0YwfQxuj3wFRYeYSimp3xXB23vSG9UTixAfPRFwqpBqCOtKEjkqemzaLJ0SkTcnumJTNDFzXvri378ovVlviDPlNEzeXtbnVlnYtzfEjd9UnKDbBeWMUTZ0P1TCPnCBJ9oogf%2FwQ9XZl3o6o4Zv6Yn4Bc09BsVkimNZwH1Ni94zF6wywDP%2FdeGHRI5oz%2BisgAM%2B0LLRoT72%2BQyQdFS2p2zJaoDSu8jweRVcZcj6CJAZPQs6AAFIItvjOVWqJjeZwGni1yvAizY2oYRB8f8q3A6zTysdZjrMX8uqpJJD9HJeD7XL%2FHcGiF6HeMG8PceAZ9%2BOmUEKoD%2BMQVmvwylgi7LKnDjuifYmtj3QlZJFjh%2BaMuX4WHh38wWo7Ta%2FuWaAVSCO%2FeNBRMwJFoK13snoJdno99BVCasoucFxoA7r7WYkBlHt2egO6UheCJ7qLQrkXiRYNbsSIWN8HHrcbmKnY%2FqJsOLcZjeZwGni1yvAizY2oYRB8doTwXG2YnHwdVvndKw2InLfXWG9E0QybRE3J7piUzQxc1764t%2B%2FKL1AQQBByvPnsr4sGFogUvWaYzvvJGNQD6UT%2Bs4772qu7ubzERQYukSZ62ZYBCn6aSUizza%2B7WkHDloUbJlp50RIBVdvyg0EBhME%2Bc%2FMZEhvWNYrAdS2rwkAzyOiB4XMb9jkE7s7EM7JCULsPVwvFxdstzoKYcD5PueHlyiT6fDR8BhnphA73vgBe6LrZ8AjtJdrJnsZq7GkM1mjNu5opnJ%2By4ig5ve%2B6k%2Br7WYkBlHt2fRXrigBXZLZIVhfrZysjYurXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quANz3BCYbP%2FKiCWyWbyN1r%2F6anfFcHbe9IV7ZbbdjrgqZsWnYkbuVXeevnJ2KNuJIn%2FyazTw4Su7ec0KesCtCwWh5oi2qiKveYNSZST052kagptqd9FarITSzi7zSJLoPxGxWSKY1nAfVE43kPmuXwxi8jqtd7hPbcP6KyAAz7Qsv6OR0uXNscFyzXxHw2diwdSK9M6t7gwyb0BOqwDC5vO4iYTrdRNSuUqidOopC26W%2BB2MLu4stphZsagleuxRpzhMaQqUsiE%2F6DzA2FdMkCWFGOOnCTsfkUd2zWEyIslCz5yzDUd4rB86%2B1mJAZR7dnpScvpSDoEM4Ml2iR%2BNLAs2aM27mimcn7t%2BW3G5glEPKvtZiQGUe3Z9FeuKAFdktk1166u2Z9fwH1j1r3IbaA1BDTyeB9EgLJF1fq3LAdys44kLbo1xV5mxwC56I4Wb%2FrqBCeAtIxj0wi3aqP7o50dXWKgxeJBaCMDudcscIPRBX4CV1JIjscVU7qQU17KN9Y0bXxXBC5c5MFg2Tpj4CGGGRYDo7Yyhf3nQpHUKccstoNsjjunZGW1WAVn8n5LxQ89x4Bn346ZQSGzPC8F0B10ZBO7OxDOyQlkE7s7EM7JCWQTuzsQzskJUOxsI4a5MZQGGWa80Svj52tcAAWzpOG6W8CYhfrSz%2BMwQ9XZl3o6o5fSJsoxMYqUxsVkimNZwH1RON5D5rl8Ma6wg8DoCOoFDX7KAN%2F4m5Gvw4Fc1%2FyucpIdbkW7SkgvkR%2BxUNeEfNcJM8%2BCxFTxgwO51yxwg9EFfgJXUkiOxxVTupBTXso31jRtfFcELlzkwWDZOmPgIYYicuMLiylxSmDAgur0rIQYUgmVO4FLVzFNz8tCdKbDqw6CUpYO98757jabbpoGsR%2FZozbuaKZyfuzbVnpwlomGDXc8LQl2JkyF8xI8JU6D9SE8GwLQAWm5GaM27mimcn7s21Z6cJaJhgkynXl%2FMftYBfGd%2FhehpgPmCWJEKem7YxGUzw7kte28HnWP1WVXEeNOJC26NcVeZscAueiOFm%2F66gQngLSMY9MIt2qj%2B6OdHV1ioMXiQWgjB72n%2Fw345r6e82G2IIOkT2qc0%2FlSQR9UpBO7OxDOyQlkE7s7EM7JCXGo51DuWJNSgXWyj1UtKxtk%2F0E204rYifnEmnbx7cxNMEPV2Zd6OqOX0ibKMTGKlMbFZIpjWcB9UTjeQ%2Ba5fDGusIPA6AjqBSfJ2f8aQKdCL8OBXNf8rnKSHW5Fu0pIL5EfsVDXhHzXCTPPgsRU8YMV1G5pzqtMK9jX4H4glxkcPTz6YigFzOTr7WYkBlHt2cWClXWvtqT87QrkXiRYNbsvSH3WAjE8GZvkcqyhKDPFJjeZwGni1yvAizY2oYRB8f8q3A6zTysddVvndKw2InL0p%2Fx%2FaiqI6ufq9ZqE3BhG2wHCkxS1F6i0Blh%2BtB0C%2Bs8gomsGfXf7h6iphsPE7uhQcngAl0QD50vI6rXe4T23I2Yjawtp%2BV1wahDWZJSzjobFZIpjWcB9WK6tPHD07lh%2FncQ5X5iJHd1KbEdxEUF16LncHq00hJYoIUgp9YewmZIr0zq3uDDJvQE6rAMLm87iJhOt1E1K5SqJ06ikLbpb4HYwu7iy2mFmxqCV67FGnOExpCpSyIT%2Frb%2BcrtUReDqZm1tX2uB4D%2BWeWxmcswn3pBO7OxDOyQlkE7s7EM7JCXa%2FQzjn74RBy1Kd2tRRBra%2F30qT57IPKCoNuNuZVlgHBYKVda%2B2pPztnhdr6JrxZpmjNu5opnJ%2B7NtWenCWiYYIOidGg2Dmu%2FORQtJQyF5J2r6z8LmDplr14%2BmvMViFaFLvH%2BvqN64HaD6FCcnUfPg9HvhNqF2a96Y3mcBp4tcr%2F9wh599XHi9yMEiUM%2B2hXBFaP1TMVOza9wwZ85UgFbnbZTWXzfq4QnuQcY%2BKp59rwYsxVuP4jAaS39PQz2zB%2B7ovHBbez3SEqcupqJbTK3cQp7mpA14eZPBD1dmXejqjl9ImyjExipTGxWSKY1nAfVE43kPmuXwxrrCDwOgI6gUv8CutrCQk82%2FDgVzX%2FK5ykh1uRbtKSC%2BRH7FQ14R81wkzz4LEVPGDFdRuac6rTCvY1%2BB%2BIJcZHD08%2BmIoBczk6%2B1mJAZR7dnFgpV1r7ak%2FO0K5F4kWDW7JaSgzLSz8Kyb5HKsoSgzxSY3mcBp4tcrwIs2NqGEQfH%2FKtwOs08rHXVb53SsNiJy9Kf8f2oqiOrn6vWahNwYRtsBwpMUtReovXPEkng4GXKPIKJrBn13%2B4eoqYbDxO7oUHJ4AJdEA%2BdLyOq13uE9tzjHVYzUr%2BBxV9ImyjExipTGxWSKY1nAfXOfSMYgKCXH7R5nAXWTQfW%2FjmUOKuSALEPBgnXSvytlnUpsR3ERQXXoudwerTSEljFHNWtxn6ltkivTOre4MMm9ATqsAwubzujwL98nA7DSxvj80Cb8irGOJC26NcVeZvogK9C55VHJoisGM39lPg6Bp3sqC0ENyp3Ch%2BDdw4dGzFcIQhAkBVOza2ylauHAhbmiHSvsquGpEjqhN1Jp8TkYZy%2BE8gBP8HtMt%2FsQhQTnROBRelprGW7sqOXsdpp31C%2FEToQqkYo%2F5BO7OxDOyQl0AHCZn7BilDPazu6X1M1ees%2BFmbIO8etrJnsZq7GkM1mjNu5opnJ%2B7NtWenCWiYYhj604n3786AWClXWvtqT87QrkXiRYNbse8NsljAoHA%2B7CzNRWwNrSlohkoNlD%2BoDuH5iZE%2FPG6itca75%2BH%2F9dyBv4s90zyS98Ow2THv2q4A3PcEJhs%2F8qJVB9%2B7VPOuDrrHXGQ3AgnmIo967fND2IAzq9uzU0U4meh%2F2XTb6Kz4WClXWvtqT86yZ7GauxpDNZozbuaKZyfu0s1xmAplHx7o98BUWHmEopqd8Vwdt70hvVE4sQHz0RcKqQagjrShI5Knps2iydEpE3J7piUzQxc1764t%2B%2FKL109IFp4oz8Umjt18FdyXCIRiCsH57MnovGYPgQzaFL97LHah5NFb%2BPiKr6oSGr%2FVMATjjhTduTyYbFZIpjWcB9UTjeQ%2Ba5fDG5xSQj%2FN8pTfBD1dmXejqjjeEjuMj2eJBqVzqTRQPYPbQ%2B26e8EsGRsUADSLNwlZD6CBjassqky%2Fywbfx9X%2FueNdrAI0lVKK%2F%2BAldSSI7HFVDnO1Id39GEdG18VwQuXOTdmydmwoIUDMNMLSHDBtXppuRsvEmFqg2rJnsZq7GkM1mjNu5opnJ%2By4ig5ve%2B6k%2Br7WYkBlHt2fRXrigBXZLZGouiCOlUOpErXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quANz3BCYbP%2FKhKwtoD098XnFWgPMKSFrwI%2BzodzihoGJEvI6rXe4T23BEgBCQk5%2BcAwahDWZJSzjobFZIpjWcB9YF90OWbKy%2FMg8OietJS6mc4kLbo1xV5mxwC56I4Wb%2FrNiEZsXK%2FEo4i3aqP7o50dfW4qAPaBjeeZujUluKxDnlmjNu5opnJ%2B7NtWenCWiYYJaEy2%2BZrBw7RXrigBXZLZA2qch8ZdexZrXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quAWwa5BDYYWRSvo8Y8xFrSaac4oN0Nn%2B8X0p%2Fx%2FaiqI6ufq9ZqE3BhG2wHCkxS1F6iad3uk2a0F62QTuzsQzskJZBO7OxDOyQlkE7s7EM7JCUSN31ScoNsF5YxRNnQ%2FVMI%2BcIEn2iiB%2F%2FBD1dmXejqjsGoQ1mSUs46GxWSKY1nAfUm2M8NhcDiySXlpcpukgZ4OJC26NcVeZscAueiOFm%2F66gQngLSMY9MIt2qj%2B6OdHU6Ei2MUtekewBXpwlMhNUtV9h0ELeoXUTXXO3LvgzrnV%2FRYPMc7e0O5OQ%2FxsACiA%2Bs7S2nTKRDcUNQlR3YWWwSZozbuaKZyfuzbVnpwlomGKn6PGwuqTMyFgpV1r7ak%2FO0K5F4kWDW7PktQkY%2Bnkl6G1LFkBvTxQSY3mcBp4tcrwIs2NqGEQfHLAn8XMJANZVQNkw6CzDgdWr6z8LmDplr7dlLAVk7QLp2euxY9kV8h6%2F0zKbl4fw%2FF58dLAdkI8FuKmQhvFG4DurF9rzWH7On6SIUIuzd6myuvxoZ5xYyKO%2FtiIUWVrnJsmjb0F4rZX%2F3oKaxfvXVDu%2FAghfjSgJiZozbuaKZyfuzbVnpwlomGKn6PGwuqTMyFgpV1r7ak%2FO0K5F4kWDW7AFbc5uuyUxdG1LFkBvTxQSY3mcBp4tcrwIs2NqGEQfHLAn8XMJANZVQNkw6CzDgdWr6z8LmDplr7dlLAVk7QLp2euxY9kV8h6%2F0zKbl4fw%2FF58dLAdkI8GX34YKqiwrWQOEPiuqrfjsAOT75QkwzNX75QHrrjeubwAgsF%2FK7hXbVgCDbWwHwvGTzJwSp6a67EmvICAX5exJFgpV1r7ak%2FMZ%2F%2BcVfdAZMGaM27mimcn7s21Z6cJaJhhIElExbhhId6LVf55eqfAacmlCKWNPT4Km3OBoBr3oEtdgpl2cJjtnmN5nAaeLXK8CLNjahhEHx%2FyrcDrNPKx11W%2Bd0rDYicvSn%2FH9qKojq5%2Br1moTcGEbm0IjSYk%2FOvN8eUg5CtN%2BbQSo6BG52zzTvw4Fc1%2FyucqfszJcx9Sv%2FNSuIVmMAzqSwhWDV7k%2FQN5NZzpRspa207JMeWQBZH0pbKE%2FgKf%2BSYHH1f3DVtkxs5MbFVuX3lMsqxeQa5NV9KhUWJo0alHCwTV1HQFkgGgFkE7s7EM7JCWQTuzsQzskJXariUPl9iT%2F4LIYqnSvn9XLTrjsYcMgUS1Kd2tRRBranaw0DIws33avtZiQGUe3ZxYKVda%2B2pPztnhdr6JrxZpmjNu5opnJ%2B7NtWenCWiYYtiShIWke%2Fv%2FORQtJQyF5J2r6z8LmDplr14%2BmvMViFaFLvH%2BvqN64HaD6FCcnUfPg5LMqg77oliwz2xgPGMPFGGaM27mimcn7s21Z6cJaJhip%2BjxsLqkzMhYKVda%2B2pPztCuReJFg1uxfgxSMClewmxtSxZAb08UEmN5nAaeLXK8CLNjahhEHxywJ%2FFzCQDWVUDZMOgsw4HVq%2Bs%2FC5g6Za%2B3ZSwFZO0C6dnrsWPZFfIev9Mym5eH8PxefHSwHZCPBu5bOAwP1EwyBLMlKrp1fp%2FDswTDl5qFVcXCv8U7GeITym634BRXkA6usU6%2Fnqg5jUOZIdPRs%2BINJryAgF%2BXsSRYKVda%2B2pPztnhdr6JrxZpmjNu5opnJ%2B7NtWenCWiYY1eoZ2ZK5HELORQtJQyF5J2r6z8LmDplr14%2BmvMViFaFLvH%2BvqN64HaD6FCcnUfPg5LMqg77olizvzyNPNdO0qJR%2FOQ1TYFqIwahDWZJSzjobFZIpjWcB9Y%2FC8bxmk1YMusIPA6AjqBS%2FJr3hSjE%2BohTIpj2ePSTkaDSBSQUfnvmDcyGFXxQAE%2FgJXUkiOxxVQ5ztSHd%2FRhHv06jzAOWM7A6luwUNf6N0JjGmFa0rcVU6Ei2MUtekewBXpwlMhNUtV9h0ELeoXUQU4WuTMc80d9cGBHrI0aGLFV2%2FKDQQGEzgYJr4Vgjt8JBO7OxDOyQlWwXuqwpTWnB%2Fh9MG9zoA%2F87IIUho%2B1gLZd32AL6ZKdrkbmmPUS0N%2BhI3fVJyg2wXljFE2dD9Uwj5wgSfaKIH%2F8EPV2Zd6OqOX0ibKMTGKlMbFZIpjWcB9UTjeQ%2Ba5fDGusIPA6AjqBQ25%2Fvn0R2ABL8OBXNf8rnKSHW5Fu0pIL5EfsVDXhHzXCTPPgsRU8YMDudcscIPRBX4CV1JIjscVU7qQU17KN9Y0bXxXBC5c5MFg2Tpj4CGGKzJswEdRPO6gwILq9KyEGEXhPWJcOZLRSHUDHD47kPhvwV%2B0MuxqNawmlhmv9x7VbGceKfe4fMheh%2F2XTb6Kz4WClXWvtqT8yKibMBsgRKxZozbuaKZyfuzbVnpwlomGCg8bLq7WawkvC5Us2S8yhlq%2Bs%2FC5g6Za9ePprzFYhWhS7x%2Fr6jeuB2g%2BhQnJ1Hz4MRLiBqUqlHbYuSZKmOg3vNs0sDVVyyHcQ%3D%3D</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${LCMS}/user-manager/j_spring_security_check</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN_web-publishing" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${LCMS}/auth-proxy/service/publishing-service/${LCMS_CLIENT}/</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="redirectURL Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">redirectURL</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;redirectURL&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sdocClientToken Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">sdocClientToken</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;sdocClientToken&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="mediaClientToken Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">mediaClientToken</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;mediaClientToken&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sdocUrl Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">sdocUrl</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;sdocUrl&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="mediaUrl Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">mediaUrl</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;mediaUrl&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userFirstName Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userFirstName</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userFirstName&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userLastName Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userLastName</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userLastName&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userName Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userName</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userName&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userEmail Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userEmail</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userEmail&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="europaAppAddress Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">europaAppAddress</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;europaAppAddress&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+              </hashTree>
+              <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="LOGIN_userNameChecker_AUX" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">String userName = vars.get(&quot;userName&quot;);
+if (userName == null) {
+	vars.put(&quot;userName&quot;, &quot;null&quot;);
+}</stringProp>
+              </JSR223Sampler>
+              <hashTree/>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If" enabled="true">
+                <stringProp name="IfController.condition">&quot;${userName}&quot; != &quot;null&quot;</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+              </IfController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN_autologin_SPS" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">redirectURL=${redirectURL}&amp;sdocClientToken=${sdocClientToken}&amp;mediaClientToken=${mediaClientToken}&amp;sdocUrl=${sdocUrl}&amp;mediaUrl=${mediaUrl}&amp;userFirstName=${userFirstName}&amp;userLastName=${userLastName}&amp;userName=${userName}&amp;userEmail=${userEmail}&amp;europaAppAddress=${europaAppAddress}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/autologin</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="JSESSIONID" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+                    <stringProp name="RegexExtractor.refname">JSESSIONID</stringProp>
+                    <stringProp name="RegexExtractor.regex">JSESSIONID=(.+?);</stringProp>
+                    <stringProp name="RegexExtractor.template">$1$</stringProp>
+                    <stringProp name="RegexExtractor.default"></stringProp>
+                    <stringProp name="RegexExtractor.match_number">1</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+              <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="LOGIN_userNameChecker_AUX" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">String userName = vars.get(&quot;userName&quot;);
+if (userName == null) {
+	vars.put(&quot;userName&quot;, &quot;null&quot;);
+}
+String jSessionId = vars.get(&quot;JSESSIONID&quot;);
+if (jSessionId == null) {
+	vars.put(&quot;JSESSIONID&quot;, &quot;null&quot;);
+}</stringProp>
+              </JSR223Sampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+              <stringProp name="IfController.condition">&quot;${userName}&quot; != &quot;null&quot; &amp;&amp; &quot;${JSESSIONID}&quot; != &quot;null&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="ImpWiz_set importType_AUX" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">vars.put(&quot;importType&quot;, &quot;Xml&quot;);</stringProp>
+              </JSR223Sampler>
+              <hashTree/>
+              <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Select File" enabled="true"/>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ImpWiz_importtypes" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/importtypes</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="extract importType" enabled="false">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">importType</stringProp>
+                    <stringProp name="RegexExtractor.regex">&quot;importType&quot;:&quot;(.+?)&quot;</stringProp>
+                    <stringProp name="RegexExtractor.template"></stringProp>
+                    <stringProp name="RegexExtractor.default"></stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ImpWiz_documentfolders" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/documentfolders/</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree/>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ImpWiz_mediafolders" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/mediafolders/</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree/>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ImpWiz_targetelements" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/importtypes/${importType}/targetelements</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="extract key" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">key</stringProp>
+                    <stringProp name="RegexExtractor.regex">&quot;key&quot;:&quot;(.*?)&quot;</stringProp>
+                    <stringProp name="RegexExtractor.template"></stringProp>
+                    <stringProp name="RegexExtractor.default"></stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                </hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ImpWiz_importprofiles" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/importtypes/${importType}/importprofiles</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="extract guid" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                    <stringProp name="RegexExtractor.refname">guid</stringProp>
+                    <stringProp name="RegexExtractor.regex">&quot;guid&quot;:&quot;(.+?)&quot;</stringProp>
+                    <stringProp name="RegexExtractor.template"></stringProp>
+                    <stringProp name="RegexExtractor.default"></stringProp>
+                    <stringProp name="RegexExtractor.match_number">0</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+              <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Document Location" enabled="true"/>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ImpWiz_documentfolders" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/documentfolders/All%20documents</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree/>
+              </hashTree>
+              <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="ImpWiz_resetCourse_AUX" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">vars.put(&quot;course&quot;, &quot;1&quot;);</stringProp>
+              </JSR223Sampler>
+              <hashTree/>
+              <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Import" enabled="true">
+                <boolProp name="LoopController.continue_forever">true</boolProp>
+                <stringProp name="LoopController.loops">${COURSE_N}</stringProp>
+              </LoopController>
+              <hashTree>
+                <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="ImpWiz_setXmlImportTypeZip_AUX" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey"></stringProp>
+                  <stringProp name="script">vars.put(&quot;mime&quot;, &quot;application/zip&quot;);
+vars.put(&quot;filename&quot;, vars.get(&quot;COURSE_&quot; + vars.get(&quot;course&quot;)));
+vars.put(&quot;xmlImportType&quot;, &quot;zip&quot;);</stringProp>
+                </JSR223Sampler>
+                <hashTree/>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ImpWiz_importXml_zip_SPS" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="importType" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                        <stringProp name="Argument.value">${importType}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">importType</stringProp>
+                      </elementProp>
+                      <elementProp name="documentFolder" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                        <stringProp name="Argument.value">${WPS_FOLDER_NAME}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">documentFolder</stringProp>
+                      </elementProp>
+                      <elementProp name="mediaFolder" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                        <stringProp name="Argument.value"></stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">mediaFolder</stringProp>
+                      </elementProp>
+                      <elementProp name="targetElement" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                        <stringProp name="Argument.value"></stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">targetElement</stringProp>
+                      </elementProp>
+                      <elementProp name="importProfile" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                        <stringProp name="Argument.value"></stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">importProfile</stringProp>
+                      </elementProp>
+                      <elementProp name="filename" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">true</boolProp>
+                        <stringProp name="Argument.value">${filename}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                        <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                        <stringProp name="Argument.name">filename</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/imports</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+                  <stringProp name="HTTPSampler.implementation">HttpClient3.1</stringProp>
+                  <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+                    <collectionProp name="HTTPFileArgs.files">
+                      <elementProp name="${filename}" elementType="HTTPFileArg">
+                        <stringProp name="File.path">${filename}</stringProp>
+                        <stringProp name="File.paramname">file</stringProp>
+                        <stringProp name="File.mimetype">${mime}</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree/>
+                <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="ImpWiz_incCourse_AUX" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey"></stringProp>
+                  <stringProp name="script">int course = Integer.parseInt(vars.get(&quot;course&quot;));
+course++;
+vars.put(&quot;course&quot;, &quot;&quot; + course);</stringProp>
+                </JSR223Sampler>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Promote Outputs" enabled="false"/>
+        <hashTree>
+          <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+            <boolProp name="LoopController.continue_forever">true</boolProp>
+            <stringProp name="LoopController.loops">${LCMS_CLIENT_N}</stringProp>
+          </LoopController>
+          <hashTree>
+            <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
+              <collectionProp name="CookieManager.cookies"/>
+              <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+              <stringProp name="CookieManager.policy">default</stringProp>
+              <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+            </CookieManager>
+            <hashTree/>
+            <CounterConfig guiclass="CounterConfigGui" testclass="CounterConfig" testname="iteration" enabled="true">
+              <stringProp name="CounterConfig.start">1</stringProp>
+              <stringProp name="CounterConfig.end"></stringProp>
+              <stringProp name="CounterConfig.incr">1</stringProp>
+              <stringProp name="CounterConfig.name">iteration</stringProp>
+              <stringProp name="CounterConfig.format"></stringProp>
+              <boolProp name="CounterConfig.per_user">false</boolProp>
+            </CounterConfig>
+            <hashTree/>
+            <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="set LCMS" enabled="true">
+              <stringProp name="scriptLanguage">groovy</stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="cacheKey"></stringProp>
+              <stringProp name="script">vars.put(&quot;LCMS_CLIENT&quot;, vars.get(&quot;LCMS_CLIENT_&quot; + vars.get(&quot;iteration&quot;)));
+vars.put(&quot;LCMS&quot;, vars.get(&quot;LCMS_HOST_&quot; + vars.get(&quot;iteration&quot;)));</stringProp>
+            </JSR223Sampler>
+            <hashTree/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="LOGIN" enabled="true"/>
+            <hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN_j_spring_security_check" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">j_username=${OWN_USERNAME}&amp;j_password=${OWN_PASSWORD}&amp;loginForm%3A_idJsp30.x=28&amp;loginForm%3A_idJsp30.y=7&amp;loginForm_SUBMIT=1&amp;loginForm%3A_idcl=&amp;loginForm%3A_link_hidden_=&amp;javax.faces.ViewState=8EgC7hvJoXWgMHaUZxk5rx66APlnNueyP32ajDxbvc%2Fi5akMf2jX5W9NF3roe9lcuwszUVsDa0paIZKDZQ%2FqA9OQRll%2FxMrtmLgZKpZNcAtQpr8GrghrNLKYKcMTveuOoPxjW0RBSGWLlbNKis4mRBrO4tujcnsSlCHO1%2FEcj9sLLaWs7LYqdJslRL9wHnfUPRsur%2F2RBQcVQUT6EI64y6BwzaXQK37vpgyPtA7WPQ9Zg60FtkeWwSPtEDqRX46pa%2FpdgaxKwT5Qpr8GrghrNJXzObHKV6N3y91lSAwHr2ypchHMOzsb37act%2Bt62rcJ6OF0Xl%2Bb2Roe1OHE%2BCd08IFhSRy0QFDihtkzwJTcNMF%2FuXdEjTHklsOSgV40cTZS0e17vwBJhFIgmnPhSnPHsQibPAnCvlbYOCGLTRzJwX%2F1j1r3IbaA1BDTyeB9EgLJhlIxyXpUaCSEfG4vrCIXNRrtrs2gSGsvkxOAjcwktcYjarrUWF9mT1BShWb%2BVgU6izAH8VR0q9hCcegcPPGltwmVhYCHQdjvMFydGhVy05ib%2BZRudPSUnDBcnRoVctOYm%2FmUbnT0lJw0jV1iNI4OcBe12dccOlNocuQ5ikOt7NWDrWI5UEQW3O%2Bw5Zw6oApZmdDXdVIpTTeGXbv7A%2BFDQ%2BxcwaW6ThVJnEfdiJK8bCVS2p2zJaoDSu8jweRVcZcjdZ75Szicf1DSqQ8kRr0gJtbcE4mxKSE%2F0p%2FmGsBlgqNWtgFhmSQFvZY9v4%2BPx0DeiFJGcKKWiLADBOJ%2F4yzr%2BlzrkpNJ7%2F362XfXgizrwJOIBk4zT5kxF8nyVKM35R4e0s8YVTCH4ge7CzNRWwNrSlohkoNlD%2BoD0iZqbdrifKyZJqjDdn6tCxq%2FeP%2FWfcG9KsTNirgXPd1%2FfRyoEDq1qEnExdcJE9ro8v35y5TDsrPNd2YGcYo7yvL9%2BcuUw7KzzXdmBnGKO8ry%2FfnLlMOys2x3klu%2FfW%2Fk8v35y5TDsrPNd2YGcYo7yvL9%2BcuUw7KzzXdmBnGKO8ry%2FfnLlMOys813ZgZxijvKASHLZfHcbt0SYuR0WZ4aRsl2IncyYDXz9lpj7EH4r8QAEZJUagPRcDtXeRZKkgNaQdnCleRDit2HYFpk%2F9FH%2Bx0jRt8oLc0Npjc3aD7dzcV6iLbVa3ctLrvdwBLXTqZZJMMeKE5w6dB%2FfRyoEDq1qABGpUBHd67a4Iv0DA1oe8seYqahfuKn6BGV4UKF%2Ft9YUo2V1GHb4oPk4sSQyd2SMwPYcKI5QIoyNdXax8ec8RArYJgXy3BlMtC1Jl%2BdZ8ff5HK1fim%2BzjvQtSZfnWfH3xiLlOi%2FAoqb0LUmX51nx9%2FkcrV%2BKb7OO9C1Jl%2BdZ8ff5HK1fim%2BzjvxPHmGvR3rLLg8GFGyj64zy%2BVlqPpc5P814%2FzAy7D2JmgZej%2BpVgOXqXIRzDs7G9%2BMX7OeWlYh87q4JQlGTWUtg1wCn2GFyEBzvJ1xr%2BBSYbqKt%2BXPjpDhaGelPZr1cMPaPqWyzjarsvwgai3HgCjSWhQcveWesuv8IGotx4Ao0qL%2FVhvtOvJs%2FCBqLceAKNKi%2F1Yb7TrybPwgai3HgCjSU3RvtHt8Gjpcfsu66p3fTwME4n%2FjLOv6k7JRqKK8QqmGFrz2xw3LtC1pHmTiN%2FK5gtlm4OEPGp15qvFZSTvpDPFTSxX65QPv6w6ERbQac%2FBHhfHIRSRZVH2oVC3zutsvQdnCleRDit0RS61hbPK3OR0jRt8oLc0Npjc3aD7dzcVXz9TVntv3nch5RKYIuP1JOpRxKA%2FrTMc%2BR5DNn3LTGxT5182ZhiRcL%2FQxN1n8ZQe82ED3vTPFwEHZwpXkQ4rdKXLAoniEiVIU%2BdfNmYYkXPT6rh12NjsTfNnPF9aMD7bELi6VHgjyh9lFHGr1%2BQc8yXYidzJgNfPw4WYy0oX7EFpQlypQSMByIO44UR%2B%2FRK2LuhDBK4CuUBHontOiw8SkD8YZni6sPuNmdCCvi7LZjaOFQo7AMHn8WaPZOYWpt%2Fxh4bvQEto3ajSNXWI0jg5wKCRwz5c9K8vFAA0izcJWQ9GwH%2FlgGgUi8noAGlHl2N%2BWLFS6bmx20M99H3S7qL1L2PTzen9YUDYyHg2BP36GZN5I371Rj%2BbdjKPbD78Z43i5lSZORuB%2Bc0dXuTCWKJuoS3oSvwbkQrhOT7RBzTyb9Ut6Er8G5EK4Tk%2B0Qc08m%2FWMo9sPvxnjeLmVJk5G4H5zAONw9dty35%2BmFrYFHjEW4KQwM8p5aa1RKxpUD5DlCQaR3k0QRrxV3Hy7TM%2BR%2BjEb2qNQfeVLhReKPYKPFjXGX5lPSe4so7p%2BAM%2FAEtopQXG4CFfQX2E2UMYQgkJWprJ80bAf%2BWAaBSLyegAaUeXY3wMzhk8w26rr2NLg3ybWKAWFtUQydZSGkTySCdk0zSeFgd48cPt1ZwrzMlchMJ8gaoM0GnEawCnAZ31fXP3kjd5Be8%2B4wb0%2FwDGSNyFbMl%2FlmCWJEKem7YxpQ80%2BEtPc8OpuIWl%2FmTJlLG2%2F9%2BsWDl8giAc3kI7TqNDR6Ww1W7gnxXy5d4mzmeLhBxm8hmxUv47z%2BenzvlyAuoq35c%2BOkOGy9cikK8JNKesOhEW0GnPwR4XxyEUkWVThBUsUXXHmVvL9%2BcuUw7KzkfBEBDsgpKYxkjchWzJf5ZgliRCnpu2MaUPNPhLT3PCux1zIODcKYMZ2FiGesx0CEURGc9umrmIMunSD0w2dbZY9v4%2BPx0DegvFyFWn27Y0nwQyIWQKVGJY9v4%2BPx0DegvFyFWn27Y0NohwGCJ4%2FqNo%2BpbLONquy%2FCBqLceAKNKi%2F1Yb7TrybPwgai3HgCjSLD2TeYyUeF0gjqljzqXkH3%2FXjAig5MHAlj2%2Fj4%2FHQN4gjqljzqXkH2cI8uG0qSJy2j6lss42q7L8IGotx4Ao0iw9k3mMlHhdII6pY86l5B8ObR5AEPwE4ZY9v4%2BPx0DeII6pY86l5B8fhJE0MQzAeZY9v4%2BPx0DeII6pY86l5B9qHNUB8C15B147i7dD915VWfJkiZXTih4A2u4%2B7GmvE0HZwpXkQ4rdzcArJcp%2BR125lSZORuB%2Bc3%2BajBgCYvcpS3oSvwbkQrhOT7RBzTyb9Yyj2w%2B%2FGeN4uZUmTkbgfnOk97e4csIz8W46F173k8Ujrr13JOOvD1IrGlQPkOUJBqXXAm5L2H9PvSV%2BYSIoGpYfsnc9tWx6xa00oCjErrgxxQANIs3CVkNmwaiBxyQz0zFs7N1mHXgn0nIDb3aNM76yqQYVzyjCi5xFp%2BMOzhJfuwszUVsDa0paIZKDZQ%2FqA9Imam3a4nysmSaow3Z%2BrQsav3j%2F1n3BvYB3viaReyiyf30cqBA6tah3OpqSUUJMJc%2F%2FYKScE2apT4lh8nO0EntJza%2FeDnkAv8QuLpUeCPKH2UUcavX5BzxJy0t4c8GINlGNTNkbi%2BWZeoTr%2FROwY1FY%2Fd40CjPTwgHS%2FXBuGK4rHSNG3ygtzQ2mNzdoPt3NxQJ0myJwPAcDIzWowGj55iYbFZIpjWcB9UTjeQ%2Ba5fDG5xSQj%2FN8pTetUx2nQJLr2BzwhKimhAB%2BVyl%2FP%2Bugwo35WvqHGN2kEV9ikBwnxkNcS3c7vNWTcR%2BZC%2Bz1RZ4Wq3JU2XiwRSJnZFtuDjTNmffXj6a8xWIVoVyspIbqMvs9Nxn%2Ft%2FEJnVVXKX8%2F66DCjYN8wjMWRARLb8l9soFUi%2FVDeCL4IqRXnzhUBXG%2BTXL%2Fpigswza0kkeaci%2BOW9enNTJbvR4kYbZLJkbHSXL1wMq%2FIpo0RnYAMphBy4V9SmIsmNC%2BapC4ZevkK1pIFr0oSp740Dd9GJU5JC0MSW7hhOSLoILu5RlNdIuWOFaxVsvvdnCqBT8l0WIxrkO%2FXIZrge%2FceFdo6L6JsShv5Zk1l9V14j3%2FoV%2FdBl2xfTguk1atFAtxUJd6uZMFw%2BkW81qzUfFyBNHNRd0j9ytEIROxqDfHtb5UfgsqgFZ0U8AdBYr8R7axnEDPftvt3u97DfPORxbHDh445nU0qDbjbmVZYBwWClXWvtqT863%2BFHykE5mpZozbuaKZyfvXM41QqrE%2F1%2F2phFswqNLz14wKVCTSW60%2FqGEtEBw2PxfVBXNErTM8OJC26NcVeZscAueiOFm%2F6yGVAM%2BZW6e2UCdxk4MrNi9noC3D62lIzriPH2YcgBfhmJ%2FKM3QXbxB8ojIZxmH0%2B5O56xI0qLElCidchm9BOeXt%2BDOmkqnD69xHE3xey5KQpFJr9IWC6pYKQsuFeNaOqMZLNYEzZ0sG6OTVzfhn5UZVDcdWBiOvPnZ7RWt9BSFckr6HTAXRTaST2L1BIA%2BSYBai8pyTPzBJmxqCV67FGnO4K2vB%2FG0J%2FRUL4B8mFmardlz79Wiipd88gomsGfXf7jMAVx8dNWkRRON5D5rl8MYvI6rXe4T23LBTbVYEG6aoN4SO4yPZ4kGtiBwGAhSHPYBlALiv7cwjxQANIs3CVkMImM8ayfzWAkjIIsym7R7YrXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quAtGl%2FLBIOmebiNQuT7CrLuC%2F1ghQv2wF42wuMuUpR2M%2Fv06jzAOWM7F2xzIvX%2BOJA0SPtWrLovJpRjjpwk7H5FFBU8j87uXdos21Z6cJaJhivtZiQGUe3Z7%2BdCcMXJHKxrJnsZq7GkM1mjNu5opnJ%2B7lQvNoaF0jdf1TxbuT18BNR8lyQUBJ%2BcqwFbRHwT2DYmN5nAaeLXK8CLNjahhEHxywJ%2FFzCQDWVUDZMOgsw4HVq%2Bs%2FC5g6Za%2B3ZSwFZO0C6WBQVTE%2B4gXs0ajsnYnUclpvtDO1asAKZaBl6P6lWA5epchHMOzsb348CRsPIc6cSGruMD2jxPD74MHk57VnynKn0RFgIDCd%2F9NRUTubAeJrPiUsZ3FXtn1OZAm%2B83ReMxelcz%2B4GTZFmbkG%2BHIq1Wdw%2FtZkoI5nYbL8hWQpAOxJ4NR%2BZekm0A4UreKfojt25LqwgSPMSiH1S2p2zJaoDSu8jweRVcZcjOAjG07spu0%2B0dW4IbjbdhrD1x8paSzJ9HNoRukn4gwEpeMCWMAqbv9%2B3oKPc03vsICVncG%2B%2B86ZRXK9LZSyA%2BVDmSHT0bPiDSa8gIBfl7EkWClXWvtqT8xicsyuBzaOTZozbuaKZyfuzbVnpwlomGDeSSyMQlNeRWZL7ldjsfQ6YJYkQp6btjEZTPDuS17bw2aDBlMHumNrjEKdkLLvi%2B0ivTOre4MMm9ATqsAwubzujwL98nA7DS2%2FqSntO%2BS%2B%2BfO%2FaPvtFRnAtjeu9YSFL7wZrXtF5HD3mDMRnGdEIRmfXJ1lb80BCn77o5iaobLAFGxWSKY1nAfVE43kPmuXwxs%2F914YdEjmjwQ9XZl3o6o43hI7jI9niQdPSu0khZjCTBnvESVuokNjFAA0izcJWQ%2FYSwPbBS9FcGNXkmqdetiKY3mcBp4tcrwIs2NqGEQfHLAn8XMJANZUrkCwSf4PiFPVScaG4fvZpYAJciSKdyUkTCgMCWfWRD2pCEjbtRF1o7UH4MSfx4dFA7%2Bc9cnDAqZrvz8tCseX4qRvwWzhYo9KsmexmrsaQzWaM27mimcn7LiKDm977qT67w7oAmMNfrdFeuKAFdktkvyXjiPxWtTD1j1r3IbaA1BDTyeB9EgLJi5xY4f7ltRZJq%2B%2BTLR0PODiQtujXFXmbHALnojhZv%2BuoEJ4C0jGPTCLdqo%2FujnR1OhItjFLXpHsAV6cJTITVLVfYdBC3qF1EINxtA5egd9%2BQTuzsQzskJSKr6oSGr%2FVMwhbILEtsheAbFZIpjWcB9UTjeQ%2Ba5fDGu25I4DEs9u9qlU9pLUTHfDeEjuMj2eJBzn9LOK4jHFvdECoFJNlZucUADSLNwlZDqZ2E1IIEcZJHBC0klt3epqanfFcHbe9Ib1ROLEB89EXCqkGoI60oSOSp6bNosnRKRNye6YlM0MXNe%2BuLfvyi9WW%2BIM%2BU0TN5P5TyS%2BYjU0%2BQTuzsQzskJZBO7OxDOyQlkE7s7EM7JCVcCjo5QT6EGi5rF9FTLsigL956GfJNMMcHrlqVGjjjxgCbhXkESZl2%2F30qT57IPKCoNuNuZVlgHBYKVda%2B2pPzqIw1ziWCF21mjNu5opnJ%2BzEI2FTzwsPJf1TxbuT18BO94ym7o9Km7by2tRGGkaBymN5nAaeLXK8CLNjahhEHx2hPBcbZicfB2ePph086LxoLSvF2xNf1bIhi%2FwNtqF7UJjxeg5j2aIqXbEGXOCaILoFkrSlM8YZcwhMs5KG4%2FOQVNPb%2FpkWnrauEC5rR7SSgCL1q7Er8nmWg2Rb%2FWsixWkI%2F10yPFpIIY%2F4yPRjAzM%2BP594Enc%2BsvS%2B6VTs56JE0UNOtqh%2B%2BQxLD2PFm6tZ%2BHpBO7OxDOyQlkE7s7EM7JCVRjjpwk7H5FFBU8j87uXdos21Z6cJaJhivtZiQGUe3ZxYKVda%2B2pPztCuReJFg1uwfcBaXCyoIscYQgkJWprJ86mXd8dSuUjV%2BTKvoqIOvF0ivTOre4MMm9ATqsAwubzuImE63UTUrlKonTqKQtulvgdjC7uLLaYWbGoJXrsUac4TGkKlLIhP%2BTKEkmwDEShtRjjpwk7H5FHds1hMiLJQs%2Bcsw1HeKwfOvtZiQGUe3Z6A7pSF4InuotCuReJFg1uxqR2gNCMqXbYqdj%2Bomw4txmN5nAaeLXK8CLNjahhEHx2hPBcbZicfB1W%2Bd0rDYict9dYb0TRDJtETcnumJTNDFzXvri378ovXyXgxeS7VVaG9PDHeZIADoGVON4qnsdOd3K157rndgP45m4ITy8EOTowgm2jqJM3%2FKISxSHMRQTZBO7OxDOyQl9ARBX478ILaoj3TVbmy7BvgfC3dmlYLAPIKJrBn13%2B4eoqYbDxO7oR8gM%2FkihzoFLyOq13uE9tzBD1dmXejqjjeEjuMj2eJBX%2BNTPW1qchI2tPFbVh3wsfgJXUkiOxxVQ5ztSHd%2FRhG%2BT1rk6yKEWg6luwUNf6N0Jjxeg5j2aIqXbEGXOCaILiOWj3AoTg%2FOlyg0EZs5RH4tSndrUUQa2v99Kk%2BeyDygqDbjbmVZYBwWClXWvtqT80zWhTkRFwKqZozbuaKZyftne8Pcmyf%2BD5Sq5Bv7ErReHqufeGbxLZwSYuR0WZ4aRlxT54LLtlAEOJC26NcVeZscAueiOFm%2F6zYhGbFyvxKOIt2qj%2B6OdHX9XlpUATR%2FLFtizLcN%2Bx2%2B5Crtkag%2FPoa11ZvMqwYwDZBO7OxDOyQlkE7s7EM7JCXxLaIW1Qb4Jv8udDE9HH7%2FrJnsZq7GkM1mjNu5opnJ%2B7NtWenCWiYYqwjHZjIHaTz6DPpaYzHDnGr6z8LmDplr14%2BmvMViFaH6MczlRPO2cqD6FCcnUfPgicDulVEdg7efc5Hq2caYaWkNn05J3RXUjVOh%2BgZW8ZcHcY1WRZ16YRGUnPoHR9PyW%2F7%2FpSj9AonBqENZklLOOhsVkimNZwH1j8LxvGaTVgy6wg8DoCOoFAr9YnsIl%2F%2Fqvw4Fc1%2FyucpIdbkW7SkgviYgcwP%2BpKDUJM8%2BCxFTxgyt3ut%2FYcSjxZ0UvqfAQBPugdjC7uLLaYWbGoJXrsUacyiWTHG1YG2ppUJn%2BeBKdTfUgYjpkgwVTrET4u2NF%2BMjw9jxZurWfh6QTuzsQzskJQuw9XC8XF2yYpsgYHt3J3S3lSWT4FpHnvX39cEo2hGIb3bzIH97MXKsmexmrsaQzWaM27mimcn7LAhBqYynQEsdSVouZyKnQ0D9LtprVz6ScmlCKWNPT4Km3OBoBr3oEnp10n9QQlAkmN5nAaeLXK8CLNjahhEHx2hPBcbZicfB1W%2Bd0rDYicvah94jMypoJyyMlbwcD6Xa7q%2FRQU5zTP138UQUG1TRK7%2BL%2FkV7D1KZizza%2B7WkHDkuFzCPNBvWFBVdvyg0EBhMIvwfMxed%2FhCQTuzsQzskJZBO7OxDOyQlIqvqhIav9UzCFsgsS2yF4BsVkimNZwH1RON5D5rl8MY38RI%2BHRWc5MEPV2Zd6OqON4SO4yPZ4kGHF58y5rWKCQLH8bFr%2F2apIY%2F3LKolzM7k1b7ocLUIRWDeseM8QV3El1TRMOO%2F%2BA44kLbo1xV5mxwC56I4Wb%2FrqBCeAtIxj0wi3aqP7o50dToSLYxS16R7AFenCUyE1S1X2HQQt6hdRG01hbR10%2BbxUWTnnaTlM4qxlgFNgm%2BQppBO7OxDOyQlkE7s7EM7JCWQTuzsQzskJTyCiawZ9d%2FuHqKmGw8Tu6FByeACXRAPnS8jqtd7hPbcESAEJCTn5wDBqENZklLOOhsVkimNZwH10g38gjNVWegwkOLlXN7wQjiQtujXFXmbHALnojhZv%2Bs2IRmxcr8SjiLdqo%2FujnR1lKF%2Bv4bBXx9lviDPlNEzedpTebtX9R%2F%2Bqx7%2BaecjeiBLJ8Vb%2FR9GDB9eCeax%2FA0YzIeS5JfOnrgDSG1RVQhe9rHRQvqK5Z68bts1T8R1D0WcBBPSOnjcmeyrUwkn10Q0bzyi%2FTnwsoUWClXWvtqT86yZ7GauxpDNZozbuaKZyftpvunX11cs7ro98BUWHmEopqd8Vwdt70hvVE4sQHz0RcKqQagjrShI5Knps2iydEpE3J7piUzQxc1764t%2B%2FKL14DksiqLKGN5HrjYNlnWaefc6gu%2FQzel5B3GNVkWdemH5LAMSYy4P7ZbvifJbHawKwahDWZJSzjobFZIpjWcB9XluP0cirzmGfkyr6KiDrxdIr0zq3uDDJvQE6rAMLm87KFkMmMJyCAbur9FBTnNM%2FXfxRBQbVNErFwR3U9FBhOp%2F%2BZoknXyjEzbE2VK6QkInu6QuHQMLiausmexmrsaQzWaM27mimcn7LAhBqYynQEtdRosyAE3Pop1gc%2FEa%2BpxuavrPwuYOmWvXj6a8xWIVoVyQIasny9rnoPoUJydR8%2BB9OcAA1eXzi2iadbAgUwliL%2FWCFC%2FbAXjbC4y5SlHYz9G18VwQuXOTWmefPp6Lz6X1ahw7AguoaPskB9Ez08oxkE7s7EM7JCWQTuzsQzskJS1Kd2tRRBra%2F30qT57IPKCoNuNuZVlgHBYKVda%2B2pPzrJnsZq7GkM1mjNu5opnJ%2B0SDax0YwfQxuj3wFRYeYSimp3xXB23vSG9UTixAfPRFwqpBqCOtKEjkqemzaLJ0SkTcnumJTNDFzXvri378ovVlviDPlNEzeXtbnVlnYtzfEjd9UnKDbBeWMUTZ0P1TCPnCBJ9oogf%2FwQ9XZl3o6o4Zv6Yn4Bc09BsVkimNZwH1Ni94zF6wywDP%2FdeGHRI5oz%2BisgAM%2B0LLRoT72%2BQyQdFS2p2zJaoDSu8jweRVcZcj6CJAZPQs6AAFIItvjOVWqJjeZwGni1yvAizY2oYRB8f8q3A6zTysdZjrMX8uqpJJD9HJeD7XL%2FHcGiF6HeMG8PceAZ9%2BOmUEKoD%2BMQVmvwylgi7LKnDjuifYmtj3QlZJFjh%2BaMuX4WHh38wWo7Ta%2FuWaAVSCO%2FeNBRMwJFoK13snoJdno99BVCasoucFxoA7r7WYkBlHt2egO6UheCJ7qLQrkXiRYNbsSIWN8HHrcbmKnY%2FqJsOLcZjeZwGni1yvAizY2oYRB8doTwXG2YnHwdVvndKw2InLfXWG9E0QybRE3J7piUzQxc1764t%2B%2FKL1AQQBByvPnsr4sGFogUvWaYzvvJGNQD6UT%2Bs4772qu7ubzERQYukSZ62ZYBCn6aSUizza%2B7WkHDloUbJlp50RIBVdvyg0EBhME%2Bc%2FMZEhvWNYrAdS2rwkAzyOiB4XMb9jkE7s7EM7JCULsPVwvFxdstzoKYcD5PueHlyiT6fDR8BhnphA73vgBe6LrZ8AjtJdrJnsZq7GkM1mjNu5opnJ%2By4ig5ve%2B6k%2Br7WYkBlHt2fRXrigBXZLZIVhfrZysjYurXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quANz3BCYbP%2FKiCWyWbyN1r%2F6anfFcHbe9IV7ZbbdjrgqZsWnYkbuVXeevnJ2KNuJIn%2FyazTw4Su7ec0KesCtCwWh5oi2qiKveYNSZST052kagptqd9FarITSzi7zSJLoPxGxWSKY1nAfVE43kPmuXwxi8jqtd7hPbcP6KyAAz7Qsv6OR0uXNscFyzXxHw2diwdSK9M6t7gwyb0BOqwDC5vO4iYTrdRNSuUqidOopC26W%2BB2MLu4stphZsagleuxRpzhMaQqUsiE%2F6DzA2FdMkCWFGOOnCTsfkUd2zWEyIslCz5yzDUd4rB86%2B1mJAZR7dnpScvpSDoEM4Ml2iR%2BNLAs2aM27mimcn7t%2BW3G5glEPKvtZiQGUe3Z9FeuKAFdktk1166u2Z9fwH1j1r3IbaA1BDTyeB9EgLJF1fq3LAdys44kLbo1xV5mxwC56I4Wb%2FrqBCeAtIxj0wi3aqP7o50dXWKgxeJBaCMDudcscIPRBX4CV1JIjscVU7qQU17KN9Y0bXxXBC5c5MFg2Tpj4CGGGRYDo7Yyhf3nQpHUKccstoNsjjunZGW1WAVn8n5LxQ89x4Bn346ZQSGzPC8F0B10ZBO7OxDOyQlkE7s7EM7JCWQTuzsQzskJUOxsI4a5MZQGGWa80Svj52tcAAWzpOG6W8CYhfrSz%2BMwQ9XZl3o6o5fSJsoxMYqUxsVkimNZwH1RON5D5rl8Ma6wg8DoCOoFDX7KAN%2F4m5Gvw4Fc1%2FyucpIdbkW7SkgvkR%2BxUNeEfNcJM8%2BCxFTxgwO51yxwg9EFfgJXUkiOxxVTupBTXso31jRtfFcELlzkwWDZOmPgIYYicuMLiylxSmDAgur0rIQYUgmVO4FLVzFNz8tCdKbDqw6CUpYO98757jabbpoGsR%2FZozbuaKZyfuzbVnpwlomGDXc8LQl2JkyF8xI8JU6D9SE8GwLQAWm5GaM27mimcn7s21Z6cJaJhgkynXl%2FMftYBfGd%2FhehpgPmCWJEKem7YxGUzw7kte28HnWP1WVXEeNOJC26NcVeZscAueiOFm%2F66gQngLSMY9MIt2qj%2B6OdHV1ioMXiQWgjB72n%2Fw345r6e82G2IIOkT2qc0%2FlSQR9UpBO7OxDOyQlkE7s7EM7JCXGo51DuWJNSgXWyj1UtKxtk%2F0E204rYifnEmnbx7cxNMEPV2Zd6OqOX0ibKMTGKlMbFZIpjWcB9UTjeQ%2Ba5fDGusIPA6AjqBSfJ2f8aQKdCL8OBXNf8rnKSHW5Fu0pIL5EfsVDXhHzXCTPPgsRU8YMV1G5pzqtMK9jX4H4glxkcPTz6YigFzOTr7WYkBlHt2cWClXWvtqT87QrkXiRYNbsvSH3WAjE8GZvkcqyhKDPFJjeZwGni1yvAizY2oYRB8f8q3A6zTysddVvndKw2InL0p%2Fx%2FaiqI6ufq9ZqE3BhG2wHCkxS1F6i0Blh%2BtB0C%2Bs8gomsGfXf7h6iphsPE7uhQcngAl0QD50vI6rXe4T23I2Yjawtp%2BV1wahDWZJSzjobFZIpjWcB9WK6tPHD07lh%2FncQ5X5iJHd1KbEdxEUF16LncHq00hJYoIUgp9YewmZIr0zq3uDDJvQE6rAMLm87iJhOt1E1K5SqJ06ikLbpb4HYwu7iy2mFmxqCV67FGnOExpCpSyIT%2Frb%2BcrtUReDqZm1tX2uB4D%2BWeWxmcswn3pBO7OxDOyQlkE7s7EM7JCXa%2FQzjn74RBy1Kd2tRRBra%2F30qT57IPKCoNuNuZVlgHBYKVda%2B2pPztnhdr6JrxZpmjNu5opnJ%2B7NtWenCWiYYIOidGg2Dmu%2FORQtJQyF5J2r6z8LmDplr14%2BmvMViFaFLvH%2BvqN64HaD6FCcnUfPg9HvhNqF2a96Y3mcBp4tcr%2F9wh599XHi9yMEiUM%2B2hXBFaP1TMVOza9wwZ85UgFbnbZTWXzfq4QnuQcY%2BKp59rwYsxVuP4jAaS39PQz2zB%2B7ovHBbez3SEqcupqJbTK3cQp7mpA14eZPBD1dmXejqjl9ImyjExipTGxWSKY1nAfVE43kPmuXwxrrCDwOgI6gUv8CutrCQk82%2FDgVzX%2FK5ykh1uRbtKSC%2BRH7FQ14R81wkzz4LEVPGDFdRuac6rTCvY1%2BB%2BIJcZHD08%2BmIoBczk6%2B1mJAZR7dnFgpV1r7ak%2FO0K5F4kWDW7JaSgzLSz8Kyb5HKsoSgzxSY3mcBp4tcrwIs2NqGEQfH%2FKtwOs08rHXVb53SsNiJy9Kf8f2oqiOrn6vWahNwYRtsBwpMUtReovXPEkng4GXKPIKJrBn13%2B4eoqYbDxO7oUHJ4AJdEA%2BdLyOq13uE9tzjHVYzUr%2BBxV9ImyjExipTGxWSKY1nAfXOfSMYgKCXH7R5nAXWTQfW%2FjmUOKuSALEPBgnXSvytlnUpsR3ERQXXoudwerTSEljFHNWtxn6ltkivTOre4MMm9ATqsAwubzujwL98nA7DSxvj80Cb8irGOJC26NcVeZvogK9C55VHJoisGM39lPg6Bp3sqC0ENyp3Ch%2BDdw4dGzFcIQhAkBVOza2ylauHAhbmiHSvsquGpEjqhN1Jp8TkYZy%2BE8gBP8HtMt%2FsQhQTnROBRelprGW7sqOXsdpp31C%2FEToQqkYo%2F5BO7OxDOyQl0AHCZn7BilDPazu6X1M1ees%2BFmbIO8etrJnsZq7GkM1mjNu5opnJ%2B7NtWenCWiYYhj604n3786AWClXWvtqT87QrkXiRYNbse8NsljAoHA%2B7CzNRWwNrSlohkoNlD%2BoDuH5iZE%2FPG6itca75%2BH%2F9dyBv4s90zyS98Ow2THv2q4A3PcEJhs%2F8qJVB9%2B7VPOuDrrHXGQ3AgnmIo967fND2IAzq9uzU0U4meh%2F2XTb6Kz4WClXWvtqT86yZ7GauxpDNZozbuaKZyfu0s1xmAplHx7o98BUWHmEopqd8Vwdt70hvVE4sQHz0RcKqQagjrShI5Knps2iydEpE3J7piUzQxc1764t%2B%2FKL109IFp4oz8Umjt18FdyXCIRiCsH57MnovGYPgQzaFL97LHah5NFb%2BPiKr6oSGr%2FVMATjjhTduTyYbFZIpjWcB9UTjeQ%2Ba5fDG5xSQj%2FN8pTfBD1dmXejqjjeEjuMj2eJBqVzqTRQPYPbQ%2B26e8EsGRsUADSLNwlZD6CBjassqky%2Fywbfx9X%2FueNdrAI0lVKK%2F%2BAldSSI7HFVDnO1Id39GEdG18VwQuXOTdmydmwoIUDMNMLSHDBtXppuRsvEmFqg2rJnsZq7GkM1mjNu5opnJ%2By4ig5ve%2B6k%2Br7WYkBlHt2fRXrigBXZLZGouiCOlUOpErXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quANz3BCYbP%2FKhKwtoD098XnFWgPMKSFrwI%2BzodzihoGJEvI6rXe4T23BEgBCQk5%2BcAwahDWZJSzjobFZIpjWcB9YF90OWbKy%2FMg8OietJS6mc4kLbo1xV5mxwC56I4Wb%2FrNiEZsXK%2FEo4i3aqP7o50dfW4qAPaBjeeZujUluKxDnlmjNu5opnJ%2B7NtWenCWiYYJaEy2%2BZrBw7RXrigBXZLZA2qch8ZdexZrXGu%2Bfh%2F%2FXcgb%2BLPdM8kvfDsNkx79quAWwa5BDYYWRSvo8Y8xFrSaac4oN0Nn%2B8X0p%2Fx%2FaiqI6ufq9ZqE3BhG2wHCkxS1F6iad3uk2a0F62QTuzsQzskJZBO7OxDOyQlkE7s7EM7JCUSN31ScoNsF5YxRNnQ%2FVMI%2BcIEn2iiB%2F%2FBD1dmXejqjsGoQ1mSUs46GxWSKY1nAfUm2M8NhcDiySXlpcpukgZ4OJC26NcVeZscAueiOFm%2F66gQngLSMY9MIt2qj%2B6OdHU6Ei2MUtekewBXpwlMhNUtV9h0ELeoXUTXXO3LvgzrnV%2FRYPMc7e0O5OQ%2FxsACiA%2Bs7S2nTKRDcUNQlR3YWWwSZozbuaKZyfuzbVnpwlomGKn6PGwuqTMyFgpV1r7ak%2FO0K5F4kWDW7PktQkY%2Bnkl6G1LFkBvTxQSY3mcBp4tcrwIs2NqGEQfHLAn8XMJANZVQNkw6CzDgdWr6z8LmDplr7dlLAVk7QLp2euxY9kV8h6%2F0zKbl4fw%2FF58dLAdkI8FuKmQhvFG4DurF9rzWH7On6SIUIuzd6myuvxoZ5xYyKO%2FtiIUWVrnJsmjb0F4rZX%2F3oKaxfvXVDu%2FAghfjSgJiZozbuaKZyfuzbVnpwlomGKn6PGwuqTMyFgpV1r7ak%2FO0K5F4kWDW7AFbc5uuyUxdG1LFkBvTxQSY3mcBp4tcrwIs2NqGEQfHLAn8XMJANZVQNkw6CzDgdWr6z8LmDplr7dlLAVk7QLp2euxY9kV8h6%2F0zKbl4fw%2FF58dLAdkI8GX34YKqiwrWQOEPiuqrfjsAOT75QkwzNX75QHrrjeubwAgsF%2FK7hXbVgCDbWwHwvGTzJwSp6a67EmvICAX5exJFgpV1r7ak%2FMZ%2F%2BcVfdAZMGaM27mimcn7s21Z6cJaJhhIElExbhhId6LVf55eqfAacmlCKWNPT4Km3OBoBr3oEtdgpl2cJjtnmN5nAaeLXK8CLNjahhEHx%2FyrcDrNPKx11W%2Bd0rDYicvSn%2FH9qKojq5%2Br1moTcGEbm0IjSYk%2FOvN8eUg5CtN%2BbQSo6BG52zzTvw4Fc1%2FyucqfszJcx9Sv%2FNSuIVmMAzqSwhWDV7k%2FQN5NZzpRspa207JMeWQBZH0pbKE%2FgKf%2BSYHH1f3DVtkxs5MbFVuX3lMsqxeQa5NV9KhUWJo0alHCwTV1HQFkgGgFkE7s7EM7JCWQTuzsQzskJXariUPl9iT%2F4LIYqnSvn9XLTrjsYcMgUS1Kd2tRRBranaw0DIws33avtZiQGUe3ZxYKVda%2B2pPztnhdr6JrxZpmjNu5opnJ%2B7NtWenCWiYYtiShIWke%2Fv%2FORQtJQyF5J2r6z8LmDplr14%2BmvMViFaFLvH%2BvqN64HaD6FCcnUfPg5LMqg77oliwz2xgPGMPFGGaM27mimcn7s21Z6cJaJhip%2BjxsLqkzMhYKVda%2B2pPztCuReJFg1uxfgxSMClewmxtSxZAb08UEmN5nAaeLXK8CLNjahhEHxywJ%2FFzCQDWVUDZMOgsw4HVq%2Bs%2FC5g6Za%2B3ZSwFZO0C6dnrsWPZFfIev9Mym5eH8PxefHSwHZCPBu5bOAwP1EwyBLMlKrp1fp%2FDswTDl5qFVcXCv8U7GeITym634BRXkA6usU6%2Fnqg5jUOZIdPRs%2BINJryAgF%2BXsSRYKVda%2B2pPztnhdr6JrxZpmjNu5opnJ%2B7NtWenCWiYY1eoZ2ZK5HELORQtJQyF5J2r6z8LmDplr14%2BmvMViFaFLvH%2BvqN64HaD6FCcnUfPg5LMqg77olizvzyNPNdO0qJR%2FOQ1TYFqIwahDWZJSzjobFZIpjWcB9Y%2FC8bxmk1YMusIPA6AjqBS%2FJr3hSjE%2BohTIpj2ePSTkaDSBSQUfnvmDcyGFXxQAE%2FgJXUkiOxxVQ5ztSHd%2FRhHv06jzAOWM7A6luwUNf6N0JjGmFa0rcVU6Ei2MUtekewBXpwlMhNUtV9h0ELeoXUQU4WuTMc80d9cGBHrI0aGLFV2%2FKDQQGEzgYJr4Vgjt8JBO7OxDOyQlWwXuqwpTWnB%2Fh9MG9zoA%2F87IIUho%2B1gLZd32AL6ZKdrkbmmPUS0N%2BhI3fVJyg2wXljFE2dD9Uwj5wgSfaKIH%2F8EPV2Zd6OqOX0ibKMTGKlMbFZIpjWcB9UTjeQ%2Ba5fDGusIPA6AjqBQ25%2Fvn0R2ABL8OBXNf8rnKSHW5Fu0pIL5EfsVDXhHzXCTPPgsRU8YMDudcscIPRBX4CV1JIjscVU7qQU17KN9Y0bXxXBC5c5MFg2Tpj4CGGKzJswEdRPO6gwILq9KyEGEXhPWJcOZLRSHUDHD47kPhvwV%2B0MuxqNawmlhmv9x7VbGceKfe4fMheh%2F2XTb6Kz4WClXWvtqT8yKibMBsgRKxZozbuaKZyfuzbVnpwlomGCg8bLq7WawkvC5Us2S8yhlq%2Bs%2FC5g6Za9ePprzFYhWhS7x%2Fr6jeuB2g%2BhQnJ1Hz4MRLiBqUqlHbYuSZKmOg3vNs0sDVVyyHcQ%3D%3D</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${LCMS}/user-manager/j_spring_security_check</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.BROWSER_COMPATIBLE_MULTIPART">true</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN_web-publishing" enabled="true">
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                  <collectionProp name="Arguments.arguments"/>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${LCMS}/auth-proxy/service/publishing-service/${LCMS_CLIENT}/</stringProp>
+                <stringProp name="HTTPSampler.method">GET</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="redirectURL Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">redirectURL</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;redirectURL&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sdocClientToken Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">sdocClientToken</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;sdocClientToken&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="mediaClientToken Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">mediaClientToken</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;mediaClientToken&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="sdocUrl Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">sdocUrl</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;sdocUrl&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="mediaUrl Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">mediaUrl</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;mediaUrl&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userFirstName Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userFirstName</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userFirstName&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userLastName Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userLastName</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userLastName&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userName Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userName</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userName&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="userEmail Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">userEmail</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;userEmail&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+                <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="europaAppAddress Extractor" enabled="true">
+                  <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                  <stringProp name="RegexExtractor.refname">europaAppAddress</stringProp>
+                  <stringProp name="RegexExtractor.regex">&lt;input name=&apos;europaAppAddress&apos; value=&apos;(.+?)&apos; type=&apos;hidden&apos;&gt;</stringProp>
+                  <stringProp name="RegexExtractor.template">$1$</stringProp>
+                  <stringProp name="RegexExtractor.default"></stringProp>
+                  <stringProp name="RegexExtractor.match_number">1</stringProp>
+                </RegexExtractor>
+                <hashTree/>
+              </hashTree>
+              <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="LOGIN_userNameChecker_AUX" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">String userName = vars.get(&quot;userName&quot;);
+if (userName == null) {
+	vars.put(&quot;userName&quot;, &quot;null&quot;);
+}</stringProp>
+              </JSR223Sampler>
+              <hashTree/>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If" enabled="true">
+                <stringProp name="IfController.condition">&quot;${userName}&quot; != &quot;null&quot;</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+              </IfController>
+              <hashTree>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="LOGIN_autologin_SPS" enabled="true">
+                  <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                    <collectionProp name="Arguments.arguments">
+                      <elementProp name="" elementType="HTTPArgument">
+                        <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                        <stringProp name="Argument.value">redirectURL=${redirectURL}&amp;sdocClientToken=${sdocClientToken}&amp;mediaClientToken=${mediaClientToken}&amp;sdocUrl=${sdocUrl}&amp;mediaUrl=${mediaUrl}&amp;userFirstName=${userFirstName}&amp;userLastName=${userLastName}&amp;userName=${userName}&amp;userEmail=${userEmail}&amp;europaAppAddress=${europaAppAddress}</stringProp>
+                        <stringProp name="Argument.metadata">=</stringProp>
+                      </elementProp>
+                    </collectionProp>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${WPS}/${LCMS_CLIENT}/autologin</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="JSESSIONID" enabled="true">
+                    <stringProp name="RegexExtractor.useHeaders">true</stringProp>
+                    <stringProp name="RegexExtractor.refname">JSESSIONID</stringProp>
+                    <stringProp name="RegexExtractor.regex">JSESSIONID=(.+?);</stringProp>
+                    <stringProp name="RegexExtractor.template">$1$</stringProp>
+                    <stringProp name="RegexExtractor.default"></stringProp>
+                    <stringProp name="RegexExtractor.match_number">1</stringProp>
+                  </RegexExtractor>
+                  <hashTree/>
+                </hashTree>
+              </hashTree>
+              <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="LOGIN_userNameChecker_AUX" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">String userName = vars.get(&quot;userName&quot;);
+if (userName == null) {
+	vars.put(&quot;userName&quot;, &quot;null&quot;);
+}
+String jSessionId = vars.get(&quot;JSESSIONID&quot;);
+if (jSessionId == null) {
+	vars.put(&quot;JSESSIONID&quot;, &quot;null&quot;);
+}</stringProp>
+              </JSR223Sampler>
+              <hashTree/>
+            </hashTree>
+            <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+              <stringProp name="IfController.condition">&quot;${userName}&quot; != &quot;null&quot; &amp;&amp; &quot;${JSESSIONID}&quot; != &quot;null&quot;</stringProp>
+              <boolProp name="IfController.evaluateAll">false</boolProp>
+            </IfController>
+            <hashTree>
+              <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="resetPromoteOutput" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">vars.put(&quot;promoteOutput&quot;, &quot;1&quot;);</stringProp>
+              </JSR223Sampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="updateAdministrators" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;id&quot;:&quot;Production&quot;,&quot;administrators&quot;:[&quot;${OWN_USERNAME}&quot;]}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${WPS}/${LCMS_CLIENT}/environment/update-administrators</stringProp>
+                <stringProp name="HTTPSampler.method">POST</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+              </hashTree>
+              <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+                <boolProp name="LoopController.continue_forever">true</boolProp>
+                <stringProp name="LoopController.loops">${OUTPUT_N}</stringProp>
+              </LoopController>
+              <hashTree>
+                <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="set promoteOutput" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey"></stringProp>
+                  <stringProp name="script">vars.put(&quot;PROMOTE_OUTPUT&quot;, vars.get(&quot;OUTPUT_&quot; + vars.get(&quot;promoteOutput&quot;)));</stringProp>
+                </JSR223Sampler>
+                <hashTree/>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="promoteOutput" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${WPS}/${LCMS_CLIENT}/environment/create/Production/${PROMOTE_OUTPUT}?comment=Production</stringProp>
+                  <stringProp name="HTTPSampler.method">POST</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree/>
+                <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="incCoursePromoteOutput" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey"></stringProp>
+                  <stringProp name="script">int promoteOutput = Integer.parseInt(vars.get(&quot;promoteOutput&quot;));
+promoteOutput++;
+vars.put(&quot;promoteOutput&quot;, &quot;&quot; + promoteOutput);</stringProp>
+                </JSR223Sampler>
+                <hashTree/>
+              </hashTree>
+            </hashTree>
+          </hashTree>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
