@@ -24,17 +24,17 @@
           </elementProp>
           <elementProp name="LCMS" elementType="Argument">
             <stringProp name="Argument.name">LCMS</stringProp>
-            <stringProp name="Argument.value">https://studio-sps.qa.xyleme.com</stringProp>
+            <stringProp name="Argument.value">https://studio-pps.dev.xyleme.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="LCMS_CLIENT" elementType="Argument">
             <stringProp name="Argument.name">LCMS_CLIENT</stringProp>
-            <stringProp name="Argument.value">studio-sps.qa</stringProp>
+            <stringProp name="Argument.value">studio-pps.dev</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SPS" elementType="Argument">
             <stringProp name="Argument.name">SPS</stringProp>
-            <stringProp name="Argument.value">https://sps2.qa.xyleme.com</stringProp>
+            <stringProp name="Argument.value">https://sps.dev.xyleme.com</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="USERNAME_M" elementType="Argument">
@@ -611,6 +611,126 @@ for (String reviewGuid: info.getGuids()){
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="COPY" enabled="false">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="THREADS_N" elementType="Argument">
+              <stringProp name="Argument.name">THREADS_N</stringProp>
+              <stringProp name="Argument.value">2</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="RAMP_UP_PERIOD_SEC" elementType="Argument">
+              <stringProp name="Argument.name">RAMP_UP_PERIOD_SEC</stringProp>
+              <stringProp name="Argument.value">60</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="ITERATION_N" elementType="Argument">
+              <stringProp name="Argument.name">ITERATION_N</stringProp>
+              <stringProp name="Argument.value">10</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS" elementType="Argument">
+              <stringProp name="Argument.name">LCMS</stringProp>
+              <stringProp name="Argument.value">https://studio-msis.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="LCMS_CLIENT" elementType="Argument">
+              <stringProp name="Argument.name">LCMS_CLIENT</stringProp>
+              <stringProp name="Argument.value">studio-msis.qa</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="SPS" elementType="Argument">
+              <stringProp name="Argument.name">SPS</stringProp>
+              <stringProp name="Argument.value">https://sps2.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="USERNAME_M" elementType="Argument">
+              <stringProp name="Argument.name">USERNAME_M</stringProp>
+              <stringProp name="Argument.value">yevhen.leshchynskyy@xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="PASSWORD_M" elementType="Argument">
+              <stringProp name="Argument.name">PASSWORD_M</stringProp>
+              <stringProp name="Argument.value">Qwerty1234</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="N_USERS" elementType="Argument">
+              <stringProp name="Argument.name">N_USERS</stringProp>
+              <stringProp name="Argument.value">50</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="VU_PREFIX" elementType="Argument">
+              <stringProp name="Argument.name">VU_PREFIX</stringProp>
+              <stringProp name="Argument.value">perf.user_</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="PASSWORD" elementType="Argument">
+              <stringProp name="Argument.name">PASSWORD</stringProp>
+              <stringProp name="Argument.value">5PsPeRf0rMaNcEU5eR</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="CREATED_AFTER_THRESHOLD" elementType="Argument">
+              <stringProp name="Argument.name">CREATED_AFTER_THRESHOLD</stringProp>
+              <stringProp name="Argument.value">2011-09-04T10:17:00Z</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="CREATED_BEFORE_THRESHOLD" elementType="Argument">
+              <stringProp name="Argument.name">CREATED_BEFORE_THRESHOLD</stringProp>
+              <stringProp name="Argument.value"></stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="UPLOAD_SOURCE_DIR" elementType="Argument">
+              <stringProp name="Argument.name">UPLOAD_SOURCE_DIR</stringProp>
+              <stringProp name="Argument.value">D:\Xyleme\performance\products\sps\upload\</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="OUTPUT_FOLDER" elementType="Argument">
+              <stringProp name="Argument.name">OUTPUT_FOLDER</stringProp>
+              <stringProp name="Argument.value">D:\Xyleme\performance\products\sps\output\</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="HOLD_LOAD_FOR_SEC" elementType="Argument">
+              <stringProp name="Argument.name">HOLD_LOAD_FOR_SEC</stringProp>
+              <stringProp name="Argument.value">3600</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="START_UP_TIME_SEC" elementType="Argument">
+              <stringProp name="Argument.name">START_UP_TIME_SEC</stringProp>
+              <stringProp name="Argument.value">3600</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="HOST" elementType="Argument">
+              <stringProp name="Argument.name">HOST</stringProp>
+              <stringProp name="Argument.value">https://sps-perf.qa.xyleme.com</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="MACHINES" elementType="Argument">
+              <stringProp name="Argument.name">MACHINES</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="THREADS" elementType="Argument">
+              <stringProp name="Argument.name">THREADS</stringProp>
+              <stringProp name="Argument.value">1</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="IMPORT_FILE_PREFIX_WORD" elementType="Argument">
+              <stringProp name="Argument.name">IMPORT_FILE_PREFIX_WORD</stringProp>
+              <stringProp name="Argument.value">word</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="IMPORT_FILE_PREFIX_PP" elementType="Argument">
+              <stringProp name="Argument.name">IMPORT_FILE_PREFIX_PP</stringProp>
+              <stringProp name="Argument.value">pptx</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="IMPORT_FILE_PREFIX_XML" elementType="Argument">
+              <stringProp name="Argument.name">IMPORT_FILE_PREFIX_XML</stringProp>
+              <stringProp name="Argument.value">importXML</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </Arguments>
+        <hashTree/>
         <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
           <collectionProp name="HeaderManager.headers">
             <elementProp name="" elementType="Header">
@@ -638,7 +758,7 @@ for (String reviewGuid: info.getGuids()){
 //String vu = username + (new Random().nextInt(nUsers) + 1);
 //vars.put(&quot;USERNAME&quot;, vu);
 
-vars.put(&quot;USERNAME&quot;, &quot;yleshchynskyy&quot;);</stringProp>
+vars.put(&quot;USERNAME&quot;, &quot;yevhen.leshchynskyy&quot;);</stringProp>
         </JSR223Sampler>
         <hashTree/>
         <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="LOGIN" enabled="true"/>
@@ -850,6 +970,71 @@ if (jSessionId == null) {
 	vars.put(&quot;JSESSIONID&quot;, &quot;null&quot;);
 }</stringProp>
           </JSR223Sampler>
+          <hashTree/>
+        </hashTree>
+        <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="false">
+          <stringProp name="IfController.condition">&quot;${userName}&quot; != &quot;null&quot; &amp;&amp; &quot;${JSESSIONID}&quot; != &quot;null&quot;</stringProp>
+          <boolProp name="IfController.evaluateAll">false</boolProp>
+        </IfController>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="setLoggedInFalse_AUX" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey"></stringProp>
+            <stringProp name="script">vars.putObject(&quot;loggedIn&quot;, false);</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+          <WhileController guiclass="WhileControllerGui" testclass="WhileController" testname="While not logged in" enabled="true">
+            <stringProp name="WhileController.condition">${__BeanShell(!vars.getObject(&quot;loggedIn&quot;))}</stringProp>
+          </WhileController>
+          <hashTree>
+            <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="GetPublicationsList_getList_AUX" enabled="true">
+              <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                <collectionProp name="Arguments.arguments"/>
+              </elementProp>
+              <stringProp name="HTTPSampler.domain"></stringProp>
+              <stringProp name="HTTPSampler.port"></stringProp>
+              <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+              <stringProp name="HTTPSampler.response_timeout"></stringProp>
+              <stringProp name="HTTPSampler.protocol"></stringProp>
+              <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+              <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/deployments?mine=true&amp;recent=true</stringProp>
+              <stringProp name="HTTPSampler.method">GET</stringProp>
+              <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+              <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+              <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+              <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+              <boolProp name="HTTPSampler.monitor">false</boolProp>
+              <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            </HTTPSamplerProxy>
+            <hashTree>
+              <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="extractResponse" enabled="true">
+                <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+                <stringProp name="RegexExtractor.refname">testResponse</stringProp>
+                <stringProp name="RegexExtractor.regex">(&lt;form action=&apos;${SPS}/${LCMS_CLIENT}/autologin&apos; method=&apos;post&apos;&gt;)</stringProp>
+                <stringProp name="RegexExtractor.template">$1$</stringProp>
+                <stringProp name="RegexExtractor.default">LOGGED_IN</stringProp>
+                <stringProp name="RegexExtractor.match_number">1</stringProp>
+              </RegexExtractor>
+              <hashTree/>
+              <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="setLoggedInTrue" enabled="true">
+                <stringProp name="scriptLanguage">groovy</stringProp>
+                <stringProp name="parameters"></stringProp>
+                <stringProp name="filename"></stringProp>
+                <stringProp name="cacheKey"></stringProp>
+                <stringProp name="script">String testResponse = vars.get(&quot;testResponse&quot;);
+if(testResponse.equals(&quot;LOGGED_IN&quot;)){
+	vars.putObject(&quot;loggedIn&quot;, true);
+}</stringProp>
+              </JSR223PostProcessor>
+              <hashTree/>
+            </hashTree>
+          </hashTree>
+          <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
+            <stringProp name="IfController.condition">${__BeanShell(vars.getObject(&quot;loggedIn&quot;))}</stringProp>
+            <boolProp name="IfController.evaluateAll">false</boolProp>
+          </IfController>
           <hashTree/>
         </hashTree>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If" enabled="true">
@@ -1595,7 +1780,7 @@ return true;</stringProp>
                   <hashTree/>
                 </hashTree>
               </hashTree>
-              <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create Deployment CDS" enabled="true"/>
+              <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Create Deployment CDS" enabled="false"/>
               <hashTree>
                 <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="PubWiz_OPTIONS_config_AUX" enabled="true">
                   <stringProp name="scriptLanguage">groovy</stringProp>
@@ -2126,6 +2311,141 @@ if(deploymentGuids.size() &gt; 0){
                   <hashTree/>
                 </hashTree>
               </hashTree>
+              <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Cancel Deployment" enabled="true"/>
+              <hashTree>
+                <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="PubWiz_setCancel_AUX" enabled="true">
+                  <stringProp name="BeanShellSampler.query">/*
+ * 0 - false
+ * 1 - true
+ */
+int[] PubWiz_Cancel_values = (int[])vars.getObject(&quot;PubWiz_Cancel_RANDOM_VALUES&quot;);
+if(PubWiz_Cancel_values==null) {
+	PubWiz_Cancel_values = new int[]{0,0,0,0,0,0,0,0,0,1};
+	vars.putObject(&quot;PubWiz_Cancel_RANDOM_VALUES&quot;,PubWiz_Cancel_values);
+	vars.put(&quot;PubWiz_Cancel_N_GROUPS&quot;, &quot;&quot; + PubWiz_Cancel_values.length);
+}
+Integer PubWiz_Cancel_increment = (Integer)vars.getObject(&quot;PubWiz_Cancel_INCREMENT&quot;);
+if(PubWiz_Cancel_increment==null) {
+	PubWiz_Cancel_increment = Integer.valueOf(0);
+} else {
+	int PubWiz_Cancel_nGroups = Integer.parseInt(vars.get(&quot;PubWiz_Cancel_N_GROUPS&quot;));
+	PubWiz_Cancel_increment = Integer.valueOf((PubWiz_Cancel_increment.intValue()+1) % PubWiz_Cancel_nGroups);
+}
+vars.put(&quot;PubWiz_Cancel_SWITCH_VALUE&quot;, new Integer(PubWiz_Cancel_values[PubWiz_Cancel_increment.intValue()]).toString());
+vars.putObject(&quot;PubWiz_Cancel_INCREMENT&quot;, PubWiz_Cancel_increment);</stringProp>
+                  <stringProp name="BeanShellSampler.filename"></stringProp>
+                  <stringProp name="BeanShellSampler.parameters"></stringProp>
+                  <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+                </BeanShellSampler>
+                <hashTree/>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Cancel" enabled="true">
+                  <stringProp name="IfController.condition">&quot;${PubWiz_Cancel_SWITCH_VALUE}&quot; == &quot;1&quot;</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                </IfController>
+                <hashTree>
+                  <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="PubWiz_setFalse_PubWiz_PublicationInProgress_AUX" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey"></stringProp>
+                    <stringProp name="script">vars.put(&quot;PubWiz_PublicationInProgress&quot;, &quot;false&quot;);</stringProp>
+                  </JSR223Sampler>
+                  <hashTree/>
+                  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PubWiz_getList_MINE_false_RECENT_false_SPS" enabled="true">
+                    <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                      <collectionProp name="Arguments.arguments"/>
+                    </elementProp>
+                    <stringProp name="HTTPSampler.domain"></stringProp>
+                    <stringProp name="HTTPSampler.port"></stringProp>
+                    <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                    <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                    <stringProp name="HTTPSampler.protocol"></stringProp>
+                    <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                    <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/deployments?mine=false&amp;recent=false</stringProp>
+                    <stringProp name="HTTPSampler.method">GET</stringProp>
+                    <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                    <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                    <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                    <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                    <boolProp name="HTTPSampler.monitor">false</boolProp>
+                    <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  </HTTPSamplerProxy>
+                  <hashTree>
+                    <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="get publication in progress" enabled="true">
+                      <stringProp name="scriptLanguage">groovy</stringProp>
+                      <stringProp name="parameters"></stringProp>
+                      <stringProp name="filename"></stringProp>
+                      <stringProp name="cacheKey"></stringProp>
+                      <stringProp name="script">import com.eclipsesource.json.*;
+import java.util.ArrayList;
+import java.util.Random;
+String jsonString = prev.getResponseDataAsString();
+JsonArray publications = JsonArray.readFrom(jsonString);
+ArrayList publicationsGuids = new ArrayList();
+for(int i = 0; i &lt;= publications.size() - 1; i++){
+//	String documentGuid = reviews.get(i).asObject().get(&quot;documentGuid&quot;).asString();
+	String status = publications.get(i).asObject().get(&quot;status&quot;).asString();
+	if(status.equals(&quot;in_progress&quot;)){
+		String guid = publications.get(i).asObject().get(&quot;guid&quot;).asString();
+		publicationsGuids.add(guid);
+	}
+}
+if(publicationsGuids.size() &gt; 0){
+	vars.put(&quot;publicationId&quot;, publicationsGuids.get(new Random().nextInt(publicationsGuids.size())));
+} else {
+	vars.put(&quot;publicationId&quot;, &quot;null&quot;);
+}
+if(!vars.get(&quot;publicationId&quot;).equals(&quot;null&quot;)){
+	vars.put(&quot;PubWiz_PublicationInProgress&quot;, &quot;true&quot;);
+}</stringProp>
+                    </JSR223PostProcessor>
+                    <hashTree/>
+                  </hashTree>
+                  <IfController guiclass="IfControllerPanel" testclass="IfController" testname="PubWiz_publicationInProgressCheckerFalse" enabled="true">
+                    <stringProp name="IfController.condition">&quot;${__BeanShell(vars.get(&quot;PubWiz_PublicationInProgress&quot;))}&quot; == &quot;false&quot;</stringProp>
+                    <boolProp name="IfController.evaluateAll">false</boolProp>
+                  </IfController>
+                  <hashTree>
+                    <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="PubWiz_publicationInProgressChecker" enabled="true">
+                      <stringProp name="scriptLanguage">groovy</stringProp>
+                      <stringProp name="parameters"></stringProp>
+                      <stringProp name="filename"></stringProp>
+                      <stringProp name="cacheKey"></stringProp>
+                      <stringProp name="script">ResponseCode = 200;
+IsSuccess = true;
+return true;</stringProp>
+                    </JSR223Sampler>
+                    <hashTree/>
+                  </hashTree>
+                  <IfController guiclass="IfControllerPanel" testclass="IfController" testname="PubWiz_publicationInProgressCheckerTrue" enabled="true">
+                    <stringProp name="IfController.condition">&quot;${__BeanShell(vars.get(&quot;PubWiz_PublicationInProgress&quot;))}&quot; == &quot;true&quot;</stringProp>
+                    <boolProp name="IfController.evaluateAll">false</boolProp>
+                  </IfController>
+                  <hashTree>
+                    <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="PubWiz_cancelPublication_SPS" enabled="true">
+                      <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                        <collectionProp name="Arguments.arguments"/>
+                      </elementProp>
+                      <stringProp name="HTTPSampler.domain"></stringProp>
+                      <stringProp name="HTTPSampler.port"></stringProp>
+                      <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                      <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                      <stringProp name="HTTPSampler.protocol"></stringProp>
+                      <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                      <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/deployments/${publicationId}</stringProp>
+                      <stringProp name="HTTPSampler.method">DELETE</stringProp>
+                      <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                      <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                      <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                      <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                      <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                      <boolProp name="HTTPSampler.monitor">false</boolProp>
+                      <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                    </HTTPSamplerProxy>
+                    <hashTree/>
+                  </hashTree>
+                </hashTree>
+              </hashTree>
             </hashTree>
           </hashTree>
           <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Review Wizard 411" enabled="false"/>
@@ -2628,7 +2948,7 @@ vars.putObject(&quot;RevWiz2_INCREMENT&quot;, RevWiz2_increment);</stringProp>
               <hashTree/>
             </hashTree>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Import Wizard" enabled="true"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Import Wizard" enabled="false"/>
           <hashTree>
             <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Import Word" enabled="false"/>
             <hashTree>
@@ -3832,9 +4152,9 @@ vars.put(&quot;filename&quot;, filePrefix + (new Random().nextInt(filesN) + 1) +
             </HTTPSamplerProxy>
             <hashTree/>
           </hashTree>
-          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Review Actions 411" enabled="false"/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Review Actions 411" enabled="true"/>
           <hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Edit" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Edit" enabled="false"/>
             <hashTree>
               <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="RevAct_Edit_setMineParameter_AUX" enabled="true">
                 <stringProp name="BeanShellSampler.query">/*
@@ -4475,7 +4795,7 @@ return true;</stringProp>
                 </hashTree>
               </hashTree>
             </hashTree>
-            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Close" enabled="true"/>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Close" enabled="false"/>
             <hashTree>
               <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="RevAct_Cls_setMineParameter_AUX" enabled="true">
                 <stringProp name="BeanShellSampler.query">/*
@@ -4806,6 +5126,233 @@ try {
                       <boolProp name="HTTPSampler.monitor">false</boolProp>
                       <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
                     </HTTPSamplerProxy>
+                    <hashTree/>
+                  </hashTree>
+                </hashTree>
+              </hashTree>
+            </hashTree>
+            <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Cancel RS" enabled="true"/>
+            <hashTree>
+              <BeanShellSampler guiclass="BeanShellSamplerGui" testclass="BeanShellSampler" testname="RevAct_setCancel_AUX" enabled="true">
+                <stringProp name="BeanShellSampler.query">/*
+ * 0 - false
+ * 1 - true
+ */
+int[] RevAct_Cancel_values = (int[])vars.getObject(&quot;RevAct_Cancel_RANDOM_VALUES&quot;);
+if(RevAct_Cancel_values==null) {
+	RevAct_Cancel_values = new int[]{1,0,0,0,0,0,0,0,0,1};
+	vars.putObject(&quot;RevAct_Cancel_RANDOM_VALUES&quot;,RevAct_Cancel_values);
+	vars.put(&quot;RevAct_Cancel_N_GROUPS&quot;, &quot;&quot; + RevAct_Cancel_values.length);
+}
+Integer RevAct_Cancel_increment = (Integer)vars.getObject(&quot;RevAct_Cancel_INCREMENT&quot;);
+if(RevAct_Cancel_increment==null) {
+	RevAct_Cancel_increment = Integer.valueOf(0);
+} else {
+	int RevAct_Cancel_nGroups = Integer.parseInt(vars.get(&quot;RevAct_Cancel_N_GROUPS&quot;));
+	RevAct_Cancel_increment = Integer.valueOf((RevAct_Cancel_increment.intValue()+1) % RevAct_Cancel_nGroups);
+}
+vars.put(&quot;RevAct_Cancel_SWITCH_VALUE&quot;, new Integer(RevAct_Cancel_values[RevAct_Cancel_increment.intValue()]).toString());
+vars.putObject(&quot;RevAct_Cancel_INCREMENT&quot;, RevAct_Cancel_increment);</stringProp>
+                <stringProp name="BeanShellSampler.filename"></stringProp>
+                <stringProp name="BeanShellSampler.parameters"></stringProp>
+                <boolProp name="BeanShellSampler.resetInterpreter">false</boolProp>
+              </BeanShellSampler>
+              <hashTree/>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="RevAct_lockReview_SPS" enabled="false">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;status&quot;:&quot;locked&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/reviews/3fc01aa0-1a2f-4c9f-81a4-52461e8bd230/status</stringProp>
+                <stringProp name="HTTPSampler.method">PUT</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+              </hashTree>
+              <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="RevAct_closeReview_SPS" enabled="true">
+                <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                  <collectionProp name="Arguments.arguments">
+                    <elementProp name="" elementType="HTTPArgument">
+                      <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                      <stringProp name="Argument.value">{&quot;status&quot;:&quot;closed&quot;}</stringProp>
+                      <stringProp name="Argument.metadata">=</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </elementProp>
+                <stringProp name="HTTPSampler.domain"></stringProp>
+                <stringProp name="HTTPSampler.port"></stringProp>
+                <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                <stringProp name="HTTPSampler.protocol"></stringProp>
+                <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/reviews/3fc01aa0-1a2f-4c9f-81a4-52461e8bd230/status</stringProp>
+                <stringProp name="HTTPSampler.method">PUT</stringProp>
+                <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                <boolProp name="HTTPSampler.monitor">false</boolProp>
+                <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+              </HTTPSamplerProxy>
+              <hashTree>
+                <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                  <collectionProp name="HeaderManager.headers">
+                    <elementProp name="" elementType="Header">
+                      <stringProp name="Header.name">Content-Type</stringProp>
+                      <stringProp name="Header.value">application/json</stringProp>
+                    </elementProp>
+                  </collectionProp>
+                </HeaderManager>
+                <hashTree/>
+              </hashTree>
+              <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Cancel" enabled="false">
+                <stringProp name="IfController.condition">&quot;${RevAct_Cancel_SWITCH_VALUE}&quot; == &quot;1&quot;</stringProp>
+                <boolProp name="IfController.evaluateAll">false</boolProp>
+              </IfController>
+              <hashTree>
+                <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="RevAct_setFalse_RevAct_ReviewInProgress_AUX" enabled="true">
+                  <stringProp name="scriptLanguage">groovy</stringProp>
+                  <stringProp name="parameters"></stringProp>
+                  <stringProp name="filename"></stringProp>
+                  <stringProp name="cacheKey"></stringProp>
+                  <stringProp name="script">vars.put(&quot;RevAct_ReviewInProgress&quot;, &quot;false&quot;);</stringProp>
+                </JSR223Sampler>
+                <hashTree/>
+                <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="RevAct_getList_MINE_false_STATUS_generating_SPS" enabled="true">
+                  <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+                    <collectionProp name="Arguments.arguments"/>
+                  </elementProp>
+                  <stringProp name="HTTPSampler.domain"></stringProp>
+                  <stringProp name="HTTPSampler.port"></stringProp>
+                  <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                  <stringProp name="HTTPSampler.protocol"></stringProp>
+                  <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                  <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/reviews?mine=false&amp;status=generating</stringProp>
+                  <stringProp name="HTTPSampler.method">GET</stringProp>
+                  <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                  <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                  <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                  <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                  <boolProp name="HTTPSampler.monitor">false</boolProp>
+                  <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                </HTTPSamplerProxy>
+                <hashTree>
+                  <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="get review in progress" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey"></stringProp>
+                    <stringProp name="script">import com.eclipsesource.json.*;
+import java.util.ArrayList;
+import java.util.Random;
+String jsonString = prev.getResponseDataAsString();
+JsonArray reviews = JsonArray.readFrom(jsonString);
+ArrayList reviewsGuids = new ArrayList();
+for(int i = 0; i &lt;= reviews.size() - 1; i++){
+	String status = reviews.get(i).asObject().get(&quot;status&quot;).asString();
+	if(status.equals(&quot;generating&quot;)){
+		String guid = reviews.get(i).asObject().get(&quot;guid&quot;).asString();
+		reviewsGuids.add(guid);
+	}
+}
+if(reviewsGuids.size() &gt; 0){
+	vars.put(&quot;reviewIdToCancel&quot;, reviewsGuids.get(new Random().nextInt(reviewsGuids.size())));
+} else {
+	vars.put(&quot;reviewIdToCancel&quot;, &quot;null&quot;);
+}
+if(!vars.get(&quot;reviewIdToCancel&quot;).equals(&quot;null&quot;)){
+	vars.put(&quot;RevAct_ReviewInProgress&quot;, &quot;true&quot;);
+}</stringProp>
+                  </JSR223PostProcessor>
+                  <hashTree/>
+                </hashTree>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="RevAct_reviewInProgressCheckerFalse" enabled="true">
+                  <stringProp name="IfController.condition">&quot;${__BeanShell(vars.get(&quot;RevAct_ReviewInProgress&quot;))}&quot; == &quot;false&quot;</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                </IfController>
+                <hashTree>
+                  <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="RevAct_reviewInProgressChecker" enabled="true">
+                    <stringProp name="scriptLanguage">groovy</stringProp>
+                    <stringProp name="parameters"></stringProp>
+                    <stringProp name="filename"></stringProp>
+                    <stringProp name="cacheKey"></stringProp>
+                    <stringProp name="script">ResponseCode = 200;
+IsSuccess = true;
+return true;</stringProp>
+                  </JSR223Sampler>
+                  <hashTree/>
+                </hashTree>
+                <IfController guiclass="IfControllerPanel" testclass="IfController" testname="RevAct_reviewInProgressCheckerTrue" enabled="true">
+                  <stringProp name="IfController.condition">&quot;${__BeanShell(vars.get(&quot;RevAct_ReviewInProgress&quot;))}&quot; == &quot;true&quot;</stringProp>
+                  <boolProp name="IfController.evaluateAll">false</boolProp>
+                </IfController>
+                <hashTree>
+                  <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="RevAct_cancelReview_SPS" enabled="true">
+                    <boolProp name="HTTPSampler.postBodyRaw">true</boolProp>
+                    <elementProp name="HTTPsampler.Arguments" elementType="Arguments">
+                      <collectionProp name="Arguments.arguments">
+                        <elementProp name="" elementType="HTTPArgument">
+                          <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                          <stringProp name="Argument.value">{&quot;status&quot;:&quot;canceled&quot;}</stringProp>
+                          <stringProp name="Argument.metadata">=</stringProp>
+                        </elementProp>
+                      </collectionProp>
+                    </elementProp>
+                    <stringProp name="HTTPSampler.domain"></stringProp>
+                    <stringProp name="HTTPSampler.port"></stringProp>
+                    <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+                    <stringProp name="HTTPSampler.response_timeout"></stringProp>
+                    <stringProp name="HTTPSampler.protocol"></stringProp>
+                    <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+                    <stringProp name="HTTPSampler.path">${SPS}/${LCMS_CLIENT}/api/reviews/${reviewIdToCancel}/status</stringProp>
+                    <stringProp name="HTTPSampler.method">PUT</stringProp>
+                    <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+                    <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+                    <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+                    <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+                    <stringProp name="HTTPSampler.implementation">Java</stringProp>
+                    <boolProp name="HTTPSampler.monitor">false</boolProp>
+                    <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+                  </HTTPSamplerProxy>
+                  <hashTree>
+                    <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+                      <collectionProp name="HeaderManager.headers">
+                        <elementProp name="" elementType="Header">
+                          <stringProp name="Header.name">Content-Type</stringProp>
+                          <stringProp name="Header.value">application/json</stringProp>
+                        </elementProp>
+                      </collectionProp>
+                    </HeaderManager>
                     <hashTree/>
                   </hashTree>
                 </hashTree>
@@ -12932,159 +13479,6 @@ vars.put(&quot;delay&quot;, &quot;&quot; + millisDelay);</stringProp>
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Get Publications List" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1487846838">
-            <stringProp name="54">6</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Get Reviews List" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="-1021447918">
-            <stringProp name="54">6</stringProp>
-            <stringProp name="48">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Get Imports List" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1487846838">
-            <stringProp name="54">6</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Publication Wizard" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1452753040">
-            <stringProp name="53">5</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Review Wizard" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1487846838">
-            <stringProp name="54">6</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Import Wizard" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1487846838">
-            <stringProp name="54">6</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Review Details" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1452753040">
-            <stringProp name="53">5</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Review Actions" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1452753040">
-            <stringProp name="53">5</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
-      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="Cloud Export" enabled="false">
-        <collectionProp name="ultimatethreadgroupdata">
-          <collectionProp name="1452753040">
-            <stringProp name="53">5</stringProp>
-            <stringProp name="0">0</stringProp>
-            <stringProp name="-1424104978">${START_UP_TIME_SEC}</stringProp>
-            <stringProp name="1771317522">${HOLD_LOAD_FOR_SEC}</stringProp>
-            <stringProp name="10">10</stringProp>
-          </collectionProp>
-        </collectionProp>
-        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
-          <boolProp name="LoopController.continue_forever">false</boolProp>
-          <intProp name="LoopController.loops">-1</intProp>
-        </elementProp>
-        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
-      </kg.apc.jmeter.threads.UltimateThreadGroup>
-      <hashTree/>
       <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="false">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>

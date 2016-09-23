@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="MSIS" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="MACHINES" elementType="Argument">
+            <stringProp name="Argument.name">MACHINES</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREADS" elementType="Argument">
+            <stringProp name="Argument.name">THREADS</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RAMPUP" elementType="Argument">
+            <stringProp name="Argument.name">RAMPUP</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="LOOPS" elementType="Argument">
+            <stringProp name="Argument.name">LOOPS</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SIZE" elementType="Argument">
+            <stringProp name="Argument.name">SIZE</stringProp>
+            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="PROTOCOL" elementType="Argument">
+            <stringProp name="Argument.name">PROTOCOL</stringProp>
+            <stringProp name="Argument.value">https</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="HOST" elementType="Argument">
+            <stringProp name="Argument.name">HOST</stringProp>
+            <stringProp name="Argument.value">msis-perf.qa.xyleme.com</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="APP_PATH" elementType="Argument">
+            <stringProp name="Argument.name">APP_PATH</stringProp>
+            <stringProp name="Argument.value">MSOfficeIntegration.Web</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ACTION" elementType="Argument">
+            <stringProp name="Argument.name">ACTION</stringProp>
+            <stringProp name="Argument.value">OfficeOutput</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ACTION_2" elementType="Argument">
+            <stringProp name="Argument.name">ACTION_2</stringProp>
+            <stringProp name="Argument.value">ReviewOutput/2</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SC1_LOOPS_N" elementType="Argument">
+            <stringProp name="Argument.name">SC1_LOOPS_N</stringProp>
+            <stringProp name="Argument.value">11</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="OUTPUT_FOLDER" elementType="Argument">
+            <stringProp name="Argument.name">OUTPUT_FOLDER</stringProp>
+            <stringProp name="Argument.value">D:/Xyleme/performance/products/msis/output</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="MSIS-01" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1447231498000</longProp>
+        <longProp name="ThreadGroup.end_time">1447231498000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="Request Defaults" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain">${HOST}</stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+          <stringProp name="HTTPSampler.protocol">${PROTOCOL}</stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path"></stringProp>
+          <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        </ConfigTestElement>
+        <hashTree/>
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="Cookie Manager" enabled="true">
+          <collectionProp name="CookieManager.cookies">
+            <elementProp name="sharedSecret" elementType="Cookie" testname="sharedSecret">
+              <stringProp name="Cookie.value">JijX5d5qZCRa49axgKBMBKDTkNknWaKdhfS1wCesYA40C9ibjgGB4CjglKUN7qqOotprS9pxBQvNqxcPdiRVg</stringProp>
+              <stringProp name="Cookie.domain">msis-perf.qa.xyleme.com</stringProp>
+              <stringProp name="Cookie.path">/</stringProp>
+              <boolProp name="Cookie.secure">false</boolProp>
+              <longProp name="Cookie.expires">0</longProp>
+              <boolProp name="Cookie.path_specified">true</boolProp>
+              <boolProp name="Cookie.domain_specified">true</boolProp>
+            </elementProp>
+          </collectionProp>
+          <boolProp name="CookieManager.clearEachIteration">true</boolProp>
+          <stringProp name="CookieManager.implementation">org.apache.jmeter.protocol.http.control.HC4CookieHandler</stringProp>
+        </CookieManager>
+        <hashTree/>
+        <OnceOnlyController guiclass="OnceOnlyControllerGui" testclass="OnceOnlyController" testname="Once Only Controller" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="createFolder_AUX" enabled="true">
+            <stringProp name="scriptLanguage">groovy</stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="cacheKey"></stringProp>
+            <stringProp name="script">import java.io.File;
+File dir = new File(&quot;Folder_${__threadNum}&quot;);
+boolean successful = dir.mkdir();</stringProp>
+          </JSR223Sampler>
+          <hashTree/>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">${SC1_LOOPS_N}</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="programSupportMaterials" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="TargetOutput" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">SlideDeck(PowerPoint)</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">TargetOutput</stringProp>
+                </elementProp>
+                <elementProp name="TargetAudience" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">TargetAudience</stringProp>
+                </elementProp>
+                <elementProp name="OutputFormat" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">Pptx</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">OutputFormat</stringProp>
+                </elementProp>
+                <elementProp name="SaveFormat" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">PDF</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">SaveFormat</stringProp>
+                </elementProp>
+                <elementProp name="Asynchronous" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">Asynchronous</stringProp>
+                </elementProp>
+                <elementProp name="GenerateReport" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">GenerateReport</stringProp>
+                </elementProp>
+                <elementProp name="OutputFileName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">OutputFileName</stringProp>
+                </elementProp>
+                <elementProp name="PrintResolution" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">PrintResolution</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/${APP_PATH}/customer_${__threadNum}/${ACTION}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+              <collectionProp name="HTTPFileArgs.files">
+                <elementProp name="ProgramSupportMaterials_programSupportMaterials.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">ProgramSupportMaterials_programSupportMaterials.xml</stringProp>
+                  <stringProp name="File.paramname">SourceXmlFile</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+                <elementProp name="ProgramSupportMaterials_media.zip" elementType="HTTPFileArg">
+                  <stringProp name="File.path">ProgramSupportMaterials_media.zip</stringProp>
+                  <stringProp name="File.paramname">MediaArchiveFile</stringProp>
+                  <stringProp name="File.mimetype">application/zip</stringProp>
+                </elementProp>
+                <elementProp name="ProgramSupportMaterials_strings.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">ProgramSupportMaterials_strings.xml</stringProp>
+                  <stringProp name="File.paramname">Translation</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+                <elementProp name="ProgramSupportMaterials_SlideDeck.pptx" elementType="HTTPFileArg">
+                  <stringProp name="File.path">ProgramSupportMaterials_SlideDeck.pptx</stringProp>
+                  <stringProp name="File.paramname">OfficeTemplateFile</stringProp>
+                  <stringProp name="File.mimetype">application/vnd.openxmlformats-officedocument.wordprocessingml.document</stringProp>
+                </elementProp>
+                <elementProp name="ProgramSupportMaterials_MSISPowerPointOutputProfile.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">ProgramSupportMaterials_MSISPowerPointOutputProfile.xml</stringProp>
+                  <stringProp name="File.paramname">ProfileXmlFile</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+              <stringProp name="FileSaver.filename">Folder_${__threadNum}/</stringProp>
+              <boolProp name="FileSaver.errorsonly">false</boolProp>
+              <boolProp name="FileSaver.skipautonumber">false</boolProp>
+              <boolProp name="FileSaver.skipsuffix">false</boolProp>
+              <boolProp name="FileSaver.successonly">false</boolProp>
+              <boolProp name="FileSaver.addTimstamp">true</boolProp>
+            </ResultSaver>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">${SC1_LOOPS_N}</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ourSolarSystemGuideInstructor" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="TargetOutput" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">Guide</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">TargetOutput</stringProp>
+                </elementProp>
+                <elementProp name="TargetAudience" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">Instructor</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">TargetAudience</stringProp>
+                </elementProp>
+                <elementProp name="OutputFormat" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">Docx</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">OutputFormat</stringProp>
+                </elementProp>
+                <elementProp name="SaveFormat" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">PDF</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">SaveFormat</stringProp>
+                </elementProp>
+                <elementProp name="Asynchronous" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">Asynchronous</stringProp>
+                </elementProp>
+                <elementProp name="GenerateReport" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">GenerateReport</stringProp>
+                </elementProp>
+                <elementProp name="OutputFileName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">OutputFileName</stringProp>
+                </elementProp>
+                <elementProp name="PrintResolution" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">PrintResolution</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/${APP_PATH}/customer_${__threadNum}/${ACTION}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+              <collectionProp name="HTTPFileArgs.files">
+                <elementProp name="OurSolarSystem_xmldata.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_xmldata.xml</stringProp>
+                  <stringProp name="File.paramname">SourceXmlFile</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_media.zip" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_media.zip</stringProp>
+                  <stringProp name="File.paramname">MediaArchiveFile</stringProp>
+                  <stringProp name="File.mimetype">application/zip</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_strings.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_strings.xml</stringProp>
+                  <stringProp name="File.paramname">Translation</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_Guide.docx" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_Guide.docx</stringProp>
+                  <stringProp name="File.paramname">OfficeTemplateFile</stringProp>
+                  <stringProp name="File.mimetype">application/vnd.openxmlformats-officedocument.wordprocessingml.document</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_SlideDeck.pptx" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_SlideDeck.pptx</stringProp>
+                  <stringProp name="File.paramname">SlideThumbnailsTemplateFile</stringProp>
+                  <stringProp name="File.mimetype">application/vnd.openxmlformats-officedocument.presentationml.presentation</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_InstructorGuideWordOutputProfile.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_InstructorGuideWordOutputProfile.xml</stringProp>
+                  <stringProp name="File.paramname">ProfileXmlFile</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="TestPlan.comments">Guide|Instructor|Docx|PDF|false|false|(empty)|(empty)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+              <stringProp name="FileSaver.filename">Folder_${__threadNum}/</stringProp>
+              <boolProp name="FileSaver.errorsonly">false</boolProp>
+              <boolProp name="FileSaver.skipautonumber">false</boolProp>
+              <boolProp name="FileSaver.skipsuffix">false</boolProp>
+              <boolProp name="FileSaver.successonly">false</boolProp>
+              <boolProp name="FileSaver.addTimstamp">true</boolProp>
+            </ResultSaver>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <LoopController guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">true</boolProp>
+          <stringProp name="LoopController.loops">${SC1_LOOPS_N}</stringProp>
+        </LoopController>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="ourSolarSystemGuideInstructorRS" enabled="true">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="TargetOutput" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">Guide</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">TargetOutput</stringProp>
+                </elementProp>
+                <elementProp name="TargetAudience" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">Instructor</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">TargetAudience</stringProp>
+                </elementProp>
+                <elementProp name="OutputFormat" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">Docx</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">OutputFormat</stringProp>
+                </elementProp>
+                <elementProp name="SaveFormat" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">PDF</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">SaveFormat</stringProp>
+                </elementProp>
+                <elementProp name="Asynchronous" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">Asynchronous</stringProp>
+                </elementProp>
+                <elementProp name="GenerateReport" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value">false</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">GenerateReport</stringProp>
+                </elementProp>
+                <elementProp name="OutputFileName" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">OutputFileName</stringProp>
+                </elementProp>
+                <elementProp name="PrintResolution" elementType="HTTPArgument">
+                  <boolProp name="HTTPArgument.always_encode">false</boolProp>
+                  <stringProp name="Argument.value"></stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                  <boolProp name="HTTPArgument.use_equals">true</boolProp>
+                  <stringProp name="Argument.name">PrintResolution</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+            <stringProp name="HTTPSampler.response_timeout"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/${APP_PATH}/customer_${__threadNum}/${ACTION_2}</stringProp>
+            <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">true</boolProp>
+            <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
+              <collectionProp name="HTTPFileArgs.files">
+                <elementProp name="OurSolarSystem_xmldata.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_xmldata.xml</stringProp>
+                  <stringProp name="File.paramname">SourceXmlFile</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_media.zip" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_media.zip</stringProp>
+                  <stringProp name="File.paramname">MediaArchiveFile</stringProp>
+                  <stringProp name="File.mimetype">application/zip</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_strings.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_strings.xml</stringProp>
+                  <stringProp name="File.paramname">Translation</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_Guide.docx" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_Guide.docx</stringProp>
+                  <stringProp name="File.paramname">OfficeTemplateFile</stringProp>
+                  <stringProp name="File.mimetype">application/vnd.openxmlformats-officedocument.wordprocessingml.document</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_SlideDeck.pptx" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_SlideDeck.pptx</stringProp>
+                  <stringProp name="File.paramname">SlideThumbnailsTemplateFile</stringProp>
+                  <stringProp name="File.mimetype">application/vnd.openxmlformats-officedocument.presentationml.presentation</stringProp>
+                </elementProp>
+                <elementProp name="OurSolarSystem_InstructorGuideWordOutputProfile.xml" elementType="HTTPFileArg">
+                  <stringProp name="File.path">OurSolarSystem_InstructorGuideWordOutputProfile.xml</stringProp>
+                  <stringProp name="File.paramname">ProfileXmlFile</stringProp>
+                  <stringProp name="File.mimetype">text/xml</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <boolProp name="HTTPSampler.image_parser">true</boolProp>
+            <boolProp name="HTTPSampler.monitor">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="TestPlan.comments">Guide|Instructor|Docx|PDF|false|false|(empty)|(empty)</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree>
+            <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+              <stringProp name="FileSaver.filename">Folder_${__threadNum}/</stringProp>
+              <boolProp name="FileSaver.errorsonly">false</boolProp>
+              <boolProp name="FileSaver.skipautonumber">false</boolProp>
+              <boolProp name="FileSaver.skipsuffix">false</boolProp>
+              <boolProp name="FileSaver.successonly">false</boolProp>
+              <boolProp name="FileSaver.addTimstamp">true</boolProp>
+            </ResultSaver>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="clearFolder_AUX" enabled="true">
+          <stringProp name="scriptLanguage">groovy</stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="cacheKey"></stringProp>
+          <stringProp name="script">import java.io.File;
+import org.apache.commons.io.FileUtils;
+File dir = new File(&quot;Folder_${__threadNum}&quot;);
+FileUtils.cleanDirectory(dir); </stringProp>
+        </JSR223Sampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="false">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>false</assertions>
+            <subresults>false</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <hostname>true</hostname>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
